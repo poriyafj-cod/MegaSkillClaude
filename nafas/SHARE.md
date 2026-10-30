@@ -1,58 +1,42 @@
 # لینک اشتراک‌گذاری سایت نفس (NAFAS)
 
-دو لینک آماده است؛ هر دو روی ویندوز، اندروید و آیفون باز می‌شوند.
-
----
-
-## ۱) لینک فوری — همین حالا کار می‌کند (بدون ورود، بدون تنظیم)
-
-```
-https://cdn.jsdelivr.net/gh/poriyafj-cod/MegaSkillClaude@arena/9fde0eef-megaskillclaude/nafas/index.html
-```
-
-این لینک مستقیم از مخزن عمومی گیت‌هاب سرو می‌شود؛ نه لاگین می‌خواهد نه محدودیت دستگاه.
-با هر پوش جدید روی برنچ، خودش به‌روز می‌شود.
-
-| صفحه | لینک |
-| --- | --- |
-| خانه | https://cdn.jsdelivr.net/gh/poriyafj-cod/MegaSkillClaude@arena/9fde0eef-megaskillclaude/nafas/index.html |
-| فروشگاه | https://cdn.jsdelivr.net/gh/poriyafj-cod/MegaSkillClaude@arena/9fde0eef-megaskillclaude/nafas/shop.html |
-| نمونهٔ محصول | https://cdn.jsdelivr.net/gh/poriyafj-cod/MegaSkillClaude@arena/9fde0eef-megaskillclaude/nafas/product.html?p=pearl-carabiner |
-| سبد / تسویه | https://cdn.jsdelivr.net/gh/poriyafj-cod/MegaSkillClaude@arena/9fde0eef-megaskillclaude/nafas/cart.html |
-| علاقه‌مندی‌ها | https://cdn.jsdelivr.net/gh/poriyafj-cod/MegaSkillClaude@arena/9fde0eef-megaskillclaude/nafas/wishlist.html |
-| داستان برند | https://cdn.jsdelivr.net/gh/poriyafj-cod/MegaSkillClaude@arena/9fde0eef-megaskillclaude/nafas/about.html |
-| تماس | https://cdn.jsdelivr.net/gh/poriyafj-cod/MegaSkillClaude@arena/9fde0eef-megaskillclaude/nafas/contact.html |
-
----
-
-## ۲) لینک اصلی روی Vercel (کوتاه و حرفه‌ای)
+## لینک اصلی — فعال و عمومی ✅
 
 ```
 https://nafas-accessories.vercel.app
 ```
 
-همین حالا دیپلوی شده و وضعیتش **READY** است، اما حساب Vercel تیم «FJ COD»
-گزینهٔ **Deployment Protection → Vercel Authentication** را روی *All Deployments* دارد؛
-یعنی بازدیدکننده به‌جای سایت، صفحهٔ ورود Vercel را می‌بیند.
+سایت روی Vercel منتشر شده، وضعیت **READY** و محافظت آن خاموش شده است؛
+همین لینک را در واتس‌اپ، تلگرام، اینستاگرام یا پیامک بفرستید و روی ویندوز، اندروید و آیفون باز می‌شود.
 
-برای عمومی شدن (۱۰ ثانیه، یک‌بار):
+| صفحه | لینک |
+| --- | --- |
+| خانه | https://nafas-accessories.vercel.app |
+| فروشگاه | https://nafas-accessories.vercel.app/shop |
+| فیلتر دسته (گردنبند) | https://nafas-accessories.vercel.app/shop?cat=necklace |
+| نمونهٔ محصول | https://nafas-accessories.vercel.app/product?p=pearl-carabiner |
+| سبد و تسویه | https://nafas-accessories.vercel.app/cart |
+| علاقه‌مندی‌ها | https://nafas-accessories.vercel.app/wishlist |
+| داستان برند | https://nafas-accessories.vercel.app/about |
+| تماس و FAQ | https://nafas-accessories.vercel.app/contact |
+| نسخهٔ برنچ | https://nafas-accessories-git-arena-9fde0eef-megaskillclaude-fj-cod.vercel.app |
 
-1. https://vercel.com/fj-cod/nafas-accessories/settings/deployment-protection را باز کنید.
-2. بخش **Vercel Authentication** را روی **Standard Protection** (یا **Disabled**) بگذارید.
-3. **Save** کنید.
-
-از آن لحظه، این آدرس‌ها برای همه باز می‌شوند:
-
-- https://nafas-accessories.vercel.app
-- https://nafas-accessories-fj-cod.vercel.app
-- https://nafas-accessories-git-arena-9fde0eef-megaskillclaude-fj-cod.vercel.app
-
-نکته: کارت پیش‌نمایش شبکه‌های اجتماعی (واتس‌اپ/تلگرام/اینستاگرام) روی دامنهٔ Vercel
-درست کار می‌کند، چون تگ‌های `og:image` به همین دامنه اشاره می‌کنند.
+- کارت پیش‌نمایش شبکه‌های اجتماعی (تصویر ۱۲۰۰×۶۳۰ + عنوان فارسی) روی این دامنه فعال است.
+- آدرس‌های `.html` به‌صورت ۳۰۸ به آدرس تمیز ریدایرکت می‌شوند (`/shop.html` → `/shop`).
 
 ---
 
-## ۳) اگر دامنهٔ اختصاصی می‌خواهید
+## لینک پشتیبان (مستقل از ورسل)
 
-دامنه‌های شخصی از این محافظت مستثنا هستند. نام دامنه را بدهید تا وصلش کنم؛
-بعد از آن فقط باید رکورد DNS پیشنهادی Vercel را در پنل ثبت‌کنندهٔ دامنه ثبت کنید.
+اگر روزی ورسل در دسترس نبود، همین سایت از مخزن عمومی گیت‌هاب هم سرو می‌شود:
+
+```
+https://cdn.jsdelivr.net/gh/poriyafj-cod/MegaSkillClaude@arena/9fde0eef-megaskillclaude/nafas/index.html
+```
+
+---
+
+## دامنهٔ اختصاصی (اختیاری)
+
+اگر دامنه‌ای دارید، نامش را بدهید تا وصلش کنم؛ بعد از آن فقط باید رکورد DNS پیشنهادی
+ورسل را در پنل ثبت‌کنندهٔ دامنه ثبت کنید.
