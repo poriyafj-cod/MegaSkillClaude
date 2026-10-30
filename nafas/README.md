@@ -155,3 +155,12 @@ nafas/
   به‌روز می‌کند؛ برای دیپلوی دستی کافی است همین پروژه با «Redeploy» دوباره ساخته شود.
 - اگر سایت «Vercel Authentication» نشان داد، در داشبورد پروژه → **Settings → Deployment
   Protection → Vercel Authentication → Disabled** را انتخاب کنید تا برای همه عمومی شود.
+
+### لینک اشتراک‌گذاری
+
+- **لینک فوری (بدون ورود، روی هر دستگاه):**
+  `https://cdn.jsdelivr.net/gh/poriyafj-cod/MegaSkillClaude@arena/9fde0eef-megaskillclaude/nafas/index.html`
+- **لینک اصلی:** https://nafas-accessories.vercel.app — پس از خاموش‌کردن
+  *Deployment Protection → Vercel Authentication* در تنظیمات پروژه برای همه باز می‌شود.
+
+جزئیات و فهرست صفحه‌ها: [`SHARE.md`](SHARE.md)
