@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nafas-accessories-fj-cod.vercel.app/sitemap.xml
