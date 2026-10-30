@@ -382,8 +382,7 @@
     const sort = qs("#sortSelect");
     if (sort) sort.value = state.sort;
 
-    /* mobile-only bits */
-    qsa("[data-filter-close]").forEach((el) => (el.style.display = "grid"));
+    /* mobile-only bits (visibility of the close button is handled in CSS) */
     qsa("[data-filter-close-icon]").forEach((el) => {
       el.outerHTML = icon("close");
     });
