@@ -6,6 +6,9 @@
 جریان‌های خرید کارا.
 
 ### کارهای انجام‌شده
+- [x] انتشار روی Vercel: پروژهٔ `nafas-accessories` (تیم FJ COD)، بیلد `sh build.sh` → `dist`،
+      آدرس اصلی https://nafas-accessories-fj-cod.vercel.app و آدرس همیشگی
+      https://nafas-accessories.vercel.app (به‌همراه `robots.txt` و `sitemap.xml`)
 - [x] ریسرچ الگوهای UI/UX اکسسوری/جواهرات در گیت‌هاب و مستندسازی منابع در `README.md`
 - [x] سیستم طراحی: توکن‌های رنگ/تایپ/شعاع/سایه + سه فایل CSS (`tokens`, `components`, `pages`)
 - [x] کاتالوگ ۱۴ محصول در `assets/js/data.js` با مشخصات، رنگ، سایز، موجودی و نظرات

@@ -129,3 +129,29 @@ nafas/
 4. اتصال فید اینستاگرام به بخش `#nafasstyle` و افزودن ریویوهای واقعی.
 5. سئوی پیشرفته: `sitemap.xml`, داده‌ساختاریافتهٔ `Product`، و تبدیل صفحهٔ محصول به مسیر
    `/product/<slug>` با ریدایرکت.
+
+## ۹. انتشار روی Vercel
+
+سایت روی وِرسل (تیم **FJ COD**) منتشر شده است:
+
+| مورد | مقدار |
+| --- | --- |
+| آدرس اصلی | https://nafas-accessories-fj-cod.vercel.app |
+| آدرس همیشگی | https://nafas-accessories.vercel.app |
+| آدرس برنچ | https://nafas-accessories-git-arena-9fde0eef-megaskillclaude-fj-cod.vercel.app |
+| دامنهٔ موقت آخرین دیپلوی | https://nafas-accessories-2cshus3nk-fj-cod.vercel.app |
+| پوشهٔ پروژه | `nafas` (Root Directory) |
+| فرمان بیلد | `sh build.sh` |
+| پوشهٔ خروجی | `dist` |
+| نصب پکیج | غیرفعال (`installCommand: ""`) |
+
+نکته‌ها:
+
+- `build.sh` یک بیلد قطعی و بدون وابستگی است: صفحه‌ها + `assets/` + `robots.txt` + `sitemap.xml` را
+  در `dist/` جمع می‌کند. همین اسکریپت را می‌توانید لوکال هم اجرا کنید (`sh build.sh`).
+- `vercel.json` فقط `cleanUrls` (آدرس‌های بدون `.html`)، `trailingSlash: false` و
+  هدرهای کش/امنیتی را تنظیم می‌کند.
+- اگر دیپلوی با Git وصل شود، هر پوش روی `arena/9fde0eef-megaskillclaude` آدرس برنچ بالا را
+  به‌روز می‌کند؛ برای دیپلوی دستی کافی است همین پروژه با «Redeploy» دوباره ساخته شود.
+- اگر سایت «Vercel Authentication» نشان داد، در داشبورد پروژه → **Settings → Deployment
+  Protection → Vercel Authentication → Disabled** را انتخاب کنید تا برای همه عمومی شود.
