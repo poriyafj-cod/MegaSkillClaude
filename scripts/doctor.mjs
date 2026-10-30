@@ -132,13 +132,6 @@ const PROJECTS = [
     ],
   },
   {
-    id: 'nafas', folder: 'nafas', label: 'نفس (NAFAS) — فروشگاه اکسسوری دخترانه',
-    steps: [
-      {name: 'verify', cmd: 'node scripts/verify.mjs', cwd: 'nafas', why: 'لینک‌ها، تصاویر محصول و سالم بودن کاتالوگ'},
-      {name: 'smoke', cmd: 'node scripts/smoke.mjs', cwd: 'nafas', needs: ['nafas/node_modules'], why: '۴۲ تست جریان خرید با jsdom (سبد، فیلتر، تسویه، تماس)'},
-    ],
-  },
-  {
     id: 'router', folder: 'plugins/mega-skills-router', label: 'مسیریاب و کتابخانهٔ مهارت‌ها',
     steps: [
       {name: 'sync', cmd: 'python3 scripts/sync_skill_library.py --check', why: 'پلاگین با منبع canonical یکسان'},
@@ -154,7 +147,6 @@ const NPM_INSTALL_HINT = {
   'bison-brand-book': 'npm ci --prefix bison-brand-book',
   hermes: 'npm ci --prefix hermes --ignore-scripts',
   'viking-motion': 'npm ci --prefix viking-team/motion --ignore-scripts --no-audit --no-fund',
-  nafas: 'npm ci --prefix nafas --ignore-scripts --no-audit --no-fund',
 };
 
 /** Split a command without invoking a shell; support quoted args and escapes. */
