@@ -1,9 +1,9 @@
 # MegaSkillClaude Monorepo — دفتر جریان مشترک
 
-> این دفتر فقط تغییرات cross-project (CI، doctor، نقشهٔ پروژه‌ها و قراردادهای مشترک) را نگه می‌دارد. هر محصول دفتر جداگانهٔ خودش را دارد. آخرین به‌روزرسانی: **۲۰۲۶-۱۰-۱۴**.
+> این دفتر فقط تغییرات cross-project (CI، doctor، نقشهٔ پروژه‌ها و قراردادهای مشترک) را نگه می‌دارد. هر محصول دفتر جداگانهٔ خودش را دارد. آخرین به‌روزرسانی: **۲۰۲۶-۱۱-۰۲**.
 
 ## ۱) وضعیت مشترک
-- ۱۲ پروژه/زیرپروژهٔ مدیریت‌شده (به‌علاوهٔ خود مخزن)؛ دفتر هرکدام در جدول `README.md` و دستور توسعهٔ هرکدام در [`docs/directives/`](docs/directives/README.md) است.
+- ۱۳ پروژه/زیرپروژهٔ مدیریت‌شده (به‌علاوهٔ خود مخزن)؛ دفتر هرکدام در جدول `README.md` و دستور توسعهٔ هرکدام در [`docs/directives/`](docs/directives/README.md) است.
 - `node scripts/doctor.mjs <id>` مرجع فرمان‌های دقیق هر پروژه است؛ `--list` فهرست کامل را نشان می‌دهد.
 - Router canonical: **۶٬۰۱۹** مهارت = ۳٬۰۰۰ core + ۸ پروژه + ۳٬۰۱۱ GitHub؛ **۵٬۷۳۸ routable**، **۲۸۱ incomplete** و **۳۰٬۰۸۰ trigger**.
 - CI شامل typecheck/build/test، health، skill sync، PWA، دارایی‌های برند و typecheck زیرپروژهٔ Motion است.
@@ -45,3 +45,11 @@ node scripts/doctor.mjs --json
 ## ۵) لاگ جریان (افزایشی)
 - **۲۰۲۶-۱۰-۱۴** — فرمان‌ها و test discovery در doctor اصلاح شدند؛ regression parser به CI اضافه شد؛ root ۵۶ تست سبز؛ router canonical به اعداد جاری همگام شد.
 - **۲۰۲۶-۱۰-۱۴ (full validation)** — ابزارهای موقت pytest/Deno/Chromium در دسترس قرار گرفتند؛ full doctor برای هر ۱۳ دامنه و ۳۸ مرحله سبز شد؛ CHAM E2E دوباره ۱۹/۱۹ پاس شد، Orchestrator Deno ۷/۷، PWA موبایل در حالت online/offline smoke شد و Motion MP4 واقعی رندر/با ffprobe بررسی شد. محدودیت Safari واقعی و backend/deployment زنده همچنان باز است.
+
+## ۵) لاگ افزایشی مشترک
+
+### ۲۰۲۶-۱۱-۰۲ — پروژهٔ جدید `viking-site/` (وب‌سایت عمومی وایکینگ آفرود)
+- صفحهٔ فرود ایستای فارسی/RTL با ۹ بخش، فونت/لوگو/تصاویر محلی و `vercel.json` اضافه شد؛ هیچ وابستگی npm یا build ندارد.
+- پروژه به سه نقطهٔ مرکزی وصل شد: جدول پروژه‌های `README.md`، `scripts/doctor.mjs` (id: `viking-site`) و فهرست/دستور `docs/directives/13-viking-site.md`؛ اجرای CI از طریق job موجود `repo-health` و `scripts/repo_health_check.sh` انجام می‌شود (بدون تغییر فایل workflow).
+- تست قرارداد ایستا **۱۵/۱۵** و `node --check viking-site/app.js` سبز؛ رندر واقعی Chromium headless در ۱۴۴۰/۸۳۴/۳۹۰ و آزمون تعاملی (فیلتر، FAQ، فرم، لایت‌باکس، دیالوگ حقوقی، هدر) بدون خطای console و بدون سرریز افقی.
+- مرزها: انتشار Vercel، دامنه، Safari/iOS واقعی و اتصال فرم به endpoint تأیید نشده‌اند؛ مقادیر تماس و متن حقوقی جای‌نگهدارند و باید با تأیید مالک برند جایگزین شوند.

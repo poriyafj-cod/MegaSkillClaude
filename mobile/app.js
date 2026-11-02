@@ -35,6 +35,7 @@ const PROJECTS = [
   { id: "router", name: "Skill Library & Router", fa: "کتابخانه و مسیریاب مهارت‌ها", path: "plugins/mega-skills-router", test: "node scripts/doctor.mjs router", desc: "منبع canonical، sync و پلاگین قابل‌نصب" },
   { id: "brand-stickers", name: "Viking Sticker Packs", fa: "استیکرهای وایکینگ آفرود", path: "brands/viking-offroad", test: "node scripts/doctor.mjs brand-stickers", desc: "۱۲ پک، ۳۶۰ PNG شفاف و سورس ساخت" },
   { id: "brand-viking", name: "Viking Content Templates", fa: "قالب پست و استوری وایکینگ", path: "brand/viking", test: "node scripts/doctor.mjs brand-viking", desc: "قالب HTML و رندر محلی Playwright" },
+  { id: "viking-site", name: "Viking Offroad Website", fa: "وب‌سایت عمومی وایکینگ آفرود", path: "viking-site", test: "node scripts/doctor.mjs viking-site", desc: "صفحهٔ فرود ایستا، فارسی/RTL و بدون وابستگی" },
   { id: "tasks", name: "Hermes Tasks", fa: "برنامهٔ تسک‌های هرمس", path: "tasks", test: "python3 tasks/apply_hermes_tasks.py --manifest tasks/hermes_tasks.json --validate-only", desc: "مانیفست و پلنر فقط‌خواندنی تسک‌ها" },
   { id: "mobile", name: "iPhone Console", fa: "همین کنسول آیفون", path: "mobile", test: "node scripts/doctor.mjs mobile", desc: "رابط موبایل VS Code و مهارت‌ها (همین صفحه)" },
 ];
