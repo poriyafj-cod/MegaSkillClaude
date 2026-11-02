@@ -177,7 +177,7 @@
     const out = [];
     if (p.tags.includes("new")) out.push('<span class="pill pill--crystal">تازه</span>');
     if (p.tags.includes("bestseller")) out.push('<span class="pill">پرفروش</span>');
-    if (p.oldPrice) out.push('<span class="pill pill--sale">٪' + Math.round((1 - p.price / p.oldPrice) * 100) + " تخفیف</span>");
+    if (p.oldPrice) out.push('<span class="pill pill--sale">٪' + money(Math.round((1 - p.price / p.oldPrice) * 100)) + " تخفیف</span>");
     if (p.stock <= 20) out.push('<span class="pill pill--dark">موجودی کم</span>');
     return out.join("");
   }

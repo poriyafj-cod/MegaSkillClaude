@@ -78,7 +78,7 @@
       '<span class="price"><span class="price__now">' + money(pr.total) + " <small>تومان</small></span>" +
       (product.oldPrice && tier === 0 ? '<del class="price__old">' + money(product.oldPrice) + "</del>" : "") +
       "</span>" +
-      (pr.off ? '<span class="pill pill--crystal">٪' + pr.off + " تخفیف بسته</span>" : "")
+      (pr.off ? '<span class="pill pill--crystal">٪' + money(pr.off) + " تخفیف بسته</span>" : "")
     );
   }
 
@@ -107,7 +107,7 @@
       .map(
         (t, i) =>
           '<button type="button" data-tier="' + i + '" class="' + (i === 0 ? "is-active" : "") + '"><strong>' + t.label + "</strong><span>" +
-          (t.off ? "٪" + t.off + " ارزان‌تر" : "قیمت پایه") + "</span></button>"
+          (t.off ? "٪" + money(t.off) + " ارزان‌تر" : "قیمت پایه") + "</span></button>"
       )
       .join("") +
     "</div></div>" +
