@@ -247,20 +247,38 @@
       "</div>";
   }
 
-  /* ---------- boot ---------- */
-  renderSteps();
-  if (!renderItems()) {
-    summary.innerHTML = "";
-    document.querySelector("[data-checkout]").hidden = true;
-    return;
+  function renderEmptySummary() {
+    summary.innerHTML =
+      '<h2 class="card__title">' + icon("package") + "خلاصهٔ سفارش</h2>" +
+      '<p class="muted small" style="margin:10px 0 16px">هنوز چیزی انتخاب نکرده‌ای. ' +
+      "پک ۶ عددی یا ۲۴ عددی، ارزان‌ترین حالت خرید است.</p>" +
+      '<div class="summary__row"><span>هزینهٔ ارسال</span><strong>رایگان از ۱٬۲۰۰٬۰۰۰ تومان</strong></div>' +
+      '<div class="summary__row"><span>کد تخفیف</span><strong>STAR10</strong></div>' +
+      '<a class="btn btn--volt" style="width:100%;margin-top:14px" href="shop.html">دیدن نوشیدنی‌ها ' + icon("arrowLeft") + "</a>" +
+      '<a class="chip-btn" style="margin-top:10px" href="wishlist.html">' + icon("heart") + " علاقه‌مندی‌های من</a>";
   }
-  renderSummary();
+
+  /* ---------- boot ---------- */
+  function paint() {
+    const has = renderItems();
+    const checkout = document.querySelector("[data-checkout]");
+    if (checkout) checkout.hidden = !has;
+    if (has) {
+      renderSummary();
+      UI.bindAccordions(document.querySelector('[data-step-panel="2"]') || document);
+    } else {
+      renderEmptySummary();
+    }
+    return has;
+  }
+
+  renderSteps();
+  paint();
   goStep(1);
   UI.bindAccordions(document);
 
   window.addEventListener("star:change", () => {
-    const checkout = document.querySelector("[data-checkout]");
-    if (checkout.hidden || !successBox.hidden) return;
-    if (renderItems()) renderSummary();
+    if (!successBox.hidden) return;
+    paint();
   });
 })();

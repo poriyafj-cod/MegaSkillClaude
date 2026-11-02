@@ -152,6 +152,20 @@ console.log("\ncart");
   ok("steps indicator marks step 2", /is-active/.test(qa(dom, ".step")[1].className));
 }
 
+/* ---------------- empty cart ---------------- */
+console.log("\ncart (empty)");
+{
+  const dom = await loadPage("cart.html");
+  ok("empty cart shows illustration", !!q(dom, "[data-cart] .empty-state"));
+  ok("empty summary suggests next step", /هنوز چیزی/.test(q(dom, "[data-summary]").textContent));
+  ok("checkout bar hidden when empty", q(dom, "[data-checkout]").hidden === true);
+
+  dom.window.eval("window.Store.addToCart('zero-grape', 1, 1)");
+  await new Promise((r) => setTimeout(r, 30));
+  ok("cart repaints after adding from drawer", qa(dom, "[data-cart] .line-item").length === 1);
+  ok("checkout bar appears after add", q(dom, "[data-checkout]").hidden === false);
+}
+
 /* ---------------- wishlist ---------------- */
 console.log("\nwishlist");
 {
