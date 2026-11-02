@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://viking.offroad/sitemap.xml
+Sitemap: https://viking-offroad.vercel.app/sitemap.xml

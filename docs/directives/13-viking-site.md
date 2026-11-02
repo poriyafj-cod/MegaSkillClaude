@@ -32,7 +32,7 @@ python3 -m http.server 8080
 | `app.js` | هدر و نوار پیشرفت، ریویل، ناوبری موبایل با تلهٔ فوکوس، فیلتر تور، پیش‌انتخاب فرم، لایت‌باکس، FAQ، اعتبارسنجی فرم و دیالوگ‌های حقوقی |
 | `assets/` | فونت‌های محلی + مجوز OFL، لوگوی رسمی، تصاویر بهینه، آیکون‌ها و تصویر OG |
 | `vercel.json` | `cleanUrls`، هدرهای امنیتی/CSP (با هش SHA-256)، کش طولانی دارایی‌ها و `no-revalidate` برای HTML |
-| `robots.txt`, `sitemap.xml`, `manifest.webmanifest` | خزش، نقشهٔ سایت و متادیتای نصب؛ دامنهٔ `viking.offroad` جای‌نگهدار است |
+| `robots.txt`, `sitemap.xml`, `manifest.webmanifest` | خزش، نقشهٔ سایت و متادیتای نصب؛ دامنهٔ زنده `https://viking-offroad.vercel.app/` ثبت شده است |
 | `tests/test_static.py` | قراردادهای ایستا؛ جایگزین بازبینی بصری نیست |
 
 ## پروتکل دیباگ حرفه‌ای

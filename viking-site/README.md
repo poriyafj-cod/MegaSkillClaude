@@ -10,7 +10,8 @@
 | دارایی‌ها | `assets/fonts/`, `assets/img/`, `assets/og.jpg` |
 | تست | `tests/test_static.py` (Python، بدون وابستگی) — ۱۹ تست |
 | متادیتای خزش | `robots.txt`, `sitemap.xml`, `manifest.webmanifest` |
-| انتشار | Vercel با **Root Directory = `viking-site`** و `vercel.json` همین پوشه |
+| انتشار | Vercel — پروژهٔ `viking-offroad` با **Root Directory = `viking-site`** و `vercel.json` همین پوشه |
+| آدرس زنده | https://viking-offroad.vercel.app/ |
 | CI | داخل job موجود `repo-health` از طریق `scripts/repo_health_check.sh` (بدون تغییر فایل‌های workflow) |
 
 ## اجرا و تست
@@ -83,7 +84,7 @@ node scripts/doctor.mjs viking-site        # از ریشهٔ مخزن
 ⚠️ تأییدنشده:
 
 - تست روی Safari/iOS واقعی و Firefox.
-- انتشار واقعی Vercel و دامنهٔ نهایی.
+- دامنهٔ اختصاصی برند: آدرس فعلی `viking-offroad.vercel.app` است و قبل از کمپین باید به دامنهٔ نهایی منتقل شود.
 - اتصال فرم به بک‌اند واقعی، ایمیل/شمارهٔ تماس و ساعت پاسخ‌گویی (مقادیر جای‌نگهدار هستند و باید توسط مالک برند تأیید شوند).
 - متن حقوقی نهایی (شرایط، حریم خصوصی، لغو رزرو) — محتوای فعلی نمونه است.
 - قیمت‌ها، تاریخ‌های حرکت و ظرفیت‌ها عمداً در صفحه نیامده‌اند؛ باید از brief تأییدشده اضافه شوند.
@@ -93,8 +94,25 @@ node scripts/doctor.mjs viking-site        # از ریشهٔ مخزن
 1. `python3 -m unittest discover -s tests -v` و `node --check app.js`.
 2. تأیید ایمیل، ساعت پاسخ‌گویی و متن حقوقی توسط مالک برند.
 3. تنظیم `data-endpoint` فرم (در صورت نیاز) و تست ارسال واقعی.
-4. جایگزینی دامنهٔ `viking.offroad` در `robots.txt`، `sitemap.xml`، `index.html` و JSON-LD با دامنهٔ نهایی.
+4. انتقال به دامنهٔ برند: با افزودن دامنهٔ اختصاصی، `canonical`، `og:url`، JSON-LD و `robots.txt`/`sitemap.xml` را از `viking-offroad.vercel.app` به دامنهٔ نهایی تغییر بده.
 5. بازبینی تصویری روی موبایل/تبلت/دسکتاپ و یک Safari واقعی.
-6. اتصال Vercel با Root Directory = `viking-site` و بررسی deployment واقعی.
+6. تأیید deployment زنده پس از هر push (پروژهٔ `viking-offroad`، برنچ `arena/3a9f2a5d-megaskillclaude`) و بازبینی همان آدرس.
+
+## انتشار روی Vercel
+
+پروژهٔ `viking-offroad` در تیم `fj-cod` به مخزن `poriyafj-cod/MegaSkillClaude` وصل است و از برنچ `arena/3a9f2a5d-megaskillclaude` منتشر می‌شود.
+
+| تنظیم | مقدار |
+|---|---|
+| Root Directory | `viking-site` |
+| Framework Preset | Vite (فقط برای دور زدن تشخیص خودکار؛ خروجی در واقع ایستا است) |
+| Install Command | `echo no-install` |
+| Build Command | `mkdir -p dist && cp -R index.html styles.css app.js manifest.webmanifest robots.txt sitemap.xml assets dist/` |
+| Output Directory | `dist` |
+
+- خروجی، همان فایل‌های استاتیک همین پوشه است؛ هیچ باندل یا مرحلهٔ کامپایلی اجرا نمی‌شود.
+- هدرهای امنیتی/CSP و کش دارایی‌ها از `vercel.json` اعمال می‌شوند (در جدول routeهای deployment قابل بررسی است).
+- آدرس تولیدی (Production): https://viking-offroad.vercel.app/ — نسخهٔ شاخه‌ای: `viking-offroad-git-arena-3a9f2a5d-megaskillclaude-fj-cod.vercel.app`.
+- دامنهٔ `viking.offroad` هنوز به این پروژه وصل نشده است.
 
 دفتر جریان این پروژه در [PROGRESS.md](PROGRESS.md) و دستور کامل توسعه در [`docs/directives/13-viking-site.md`](../docs/directives/13-viking-site.md) است.

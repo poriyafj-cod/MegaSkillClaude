@@ -234,9 +234,9 @@ class ConfigurationTests(unittest.TestCase):
     def test_crawlability_files_are_present_and_consistent(self):
         robots = (ROOT / "robots.txt").read_text(encoding="utf-8")
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
-        self.assertIn("Sitemap: https://viking.offroad/sitemap.xml", robots)
-        self.assertIn("<loc>https://viking.offroad/</loc>", sitemap)
-        self.assertIn('href="https://viking.offroad/"', HTML)
+        self.assertIn("Sitemap: https://viking-offroad.vercel.app/sitemap.xml", robots)
+        self.assertIn("<loc>https://viking-offroad.vercel.app/</loc>", sitemap)
+        self.assertIn('href="https://viking-offroad.vercel.app/"', HTML)
 
     def test_content_security_policy_matches_the_inline_bootstrap_hash(self):
         import base64

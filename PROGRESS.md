@@ -48,6 +48,11 @@ node scripts/doctor.mjs --json
 
 ## ۵) لاگ افزایشی مشترک
 
+### ۲۰۲۶-۱۱-۰۲ — انتشار زندهٔ `viking-site/` روی Vercel
+- پروژهٔ `viking-offroad` در تیم `fj-cod` ساخته و به مخزن `poriyafj-cod/MegaSkillClaude` (برنچ `arena/3a9f2a5d-megaskillclaude`) وصل شد؛ Root Directory = `viking-site`.
+- چون سایت build ندارد، خروجی با یک Build Command ایستا (`mkdir -p dist && cp -R ... dist/`) و Output Directory = `dist` منتشر می‌شود؛ هدرهای `vercel.json` (CSP/امنیت/کش) روی deployment اعمال شده‌اند.
+- Deployment کامیت `29abed18` با وضعیت READY/PROMOTED بالا آمد و آدرس زنده https://viking-offroad.vercel.app/ محتوا را بدون احراز هویت Vercel سرو می‌کند (HTML، `styles.css` و `robots.txt` با بازیابی واقعی بررسی شدند).
+- ارجاع‌های دامنه (`canonical`، `og:url`/`og:image`، JSON-LD، `robots.txt`، `sitemap.xml`) از `viking.offroad` به دامنهٔ زنده تغییر کردند؛ دامنهٔ اختصاصی برند همچنان کار باز است.
 ### ۲۰۲۶-۱۱-۰۲ — پروژهٔ جدید `viking-site/` (وب‌سایت عمومی وایکینگ آفرود)
 - صفحهٔ فرود ایستای فارسی/RTL با ۹ بخش، فونت/لوگو/تصاویر محلی و `vercel.json` اضافه شد؛ هیچ وابستگی npm یا build ندارد.
 - پروژه به سه نقطهٔ مرکزی وصل شد: جدول پروژه‌های `README.md`، `scripts/doctor.mjs` (id: `viking-site`) و فهرست/دستور `docs/directives/13-viking-site.md`؛ اجرای CI از طریق job موجود `repo-health` و `scripts/repo_health_check.sh` انجام می‌شود (بدون تغییر فایل workflow).
