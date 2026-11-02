@@ -237,6 +237,11 @@ h4 {
   color: var(--crystal);
 }
 
+/* hidden always wins over component display rules */
+[hidden] {
+  display: none !important;
+}
+
 /* ---------- layout helpers ---------- */
 .container {
   width: 100%;
