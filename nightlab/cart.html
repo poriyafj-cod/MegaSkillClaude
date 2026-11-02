@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>سبد خرید و تسویه | نایت‌لب</title>
+    <meta name="description" content="تکمیل سفارش در سه مرحله، با بسته‌بندی بی‌نام و پرداخت خصوصی." />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#08090b" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800;900&family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body data-page="cart">
+    <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
+    <div data-chrome="header"></div>
+
+    <main id="main">
+      <section class="page-head">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="مسیر صفحه">
+            <a href="index.html">خانه</a>
+            <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+            <span aria-current="page">سبد خرید</span>
+          </nav>
+          <h1 class="h-1" style="margin-top: 10px">سبد و تکمیل سفارش</h1>
+          <p class="lead" style="margin-top: 8px">همه‌چیز در یک بستهٔ بی‌نام می‌رسد — بدون نام فروشگاه روی جعبه و فاکتور.</p>
+        </div>
+      </section>
+
+      <section class="container cart-layout">
+        <div>
+          <div class="steps" data-steps aria-label="مراحل سفارش"></div>
+
+          <!-- step 1 -->
+          <div data-step-panel="1">
+            <div class="card">
+              <h2 class="card__title"><span data-icon="cart"></span> اقلام سبد</h2>
+              <div data-cart></div>
+            </div>
+            <div class="cart-actions" data-checkout>
+              <a class="btn btn--ghost btn--sm" href="shop.html"><span data-icon="arrowRight"></span> ادامهٔ خرید</a>
+              <button class="btn btn--yellow" type="button" data-next>ادامه و ثبت اطلاعات <span data-icon="arrowLeft"></span></button>
+            </div>
+          </div>
+
+          <!-- step 2 -->
+          <div data-step-panel="2" hidden>
+            <div class="card">
+              <h2 class="card__title"><span data-icon="truck"></span> اطلاعات تحویل</h2>
+              <p class="small muted" style="margin-bottom: 14px">
+                فقط برای ارسال لازم است. نام روی بسته چاپ نمی‌شود و پیامک فقط کد رهگیری دارد.
+              </p>
+              <form data-form novalidate>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="f-name">نام و نام خانوادگی <span class="req">*</span></label>
+                    <input class="input" id="f-name" name="name" autocomplete="name" />
+                    <span class="field__error" data-err="name"></span>
+                  </div>
+                  <div class="field">
+                    <label for="f-phone">موبایل <span class="req">*</span></label>
+                    <input class="input" id="f-phone" name="phone" inputmode="tel" placeholder="۰۹۱۲۳۴۵۶۷۸۹" />
+                    <span class="field__error" data-err="phone"></span>
+                  </div>
+                  <div class="field">
+                    <label for="f-province">استان <span class="req">*</span></label>
+                    <select class="select" id="f-province" name="province" style="width: 100%">
+                      <option value="">انتخاب کن</option>
+                      <option>تهران</option>
+                      <option>البرز</option>
+                      <option>اصفهان</option>
+                      <option>فارس</option>
+                      <option>خراسان رضوی</option>
+                      <option>آذربایجان شرقی</option>
+                      <option>گیلان</option>
+                      <option>مازندران</option>
+                      <option>خوزستان</option>
+                      <option>سایر</option>
+                    </select>
+                    <span class="field__error" data-err="province"></span>
+                  </div>
+                  <div class="field">
+                    <label for="f-city">شهر <span class="req">*</span></label>
+                    <input class="input" id="f-city" name="city" />
+                    <span class="field__error" data-err="city"></span>
+                  </div>
+                  <div class="field span-2">
+                    <label for="f-address">نشانی کامل <span class="req">*</span></label>
+                    <input class="input" id="f-address" name="address" autocomplete="street-address" />
+                    <span class="field__error" data-err="address"></span>
+                  </div>
+                  <div class="field">
+                    <label for="f-postal">کد پستی <span class="req">*</span></label>
+                    <input class="input" id="f-postal" name="postal" inputmode="numeric" placeholder="۱۰ رقم" />
+                    <span class="field__error" data-err="postal"></span>
+                  </div>
+                  <div class="field">
+                    <label for="f-note">توضیح برای پیک (اختیاری)</label>
+                    <input class="input" id="f-note" name="note" />
+                    <span class="field__error" data-err="note"></span>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="cart-actions">
+              <button class="btn btn--ghost btn--sm" type="button" data-prev>بازگشت به سبد</button>
+              <button class="btn btn--yellow" type="button" data-next>ادامه به پرداخت <span data-icon="arrowLeft"></span></button>
+            </div>
+          </div>
+
+          <!-- step 3 -->
+          <div data-step-panel="3" hidden>
+            <div class="card">
+              <h2 class="card__title"><span data-icon="card"></span> روش پرداخت</h2>
+              <div class="pays" data-pays>
+                <label class="pay is-active">
+                  <input type="radio" name="pay" value="online" checked />
+                  <span><strong>پرداخت آنلاین</strong><span>درگاه بانکی — همهٔ کارت‌های شتاب</span></span>
+                </label>
+                <label class="pay">
+                  <input type="radio" name="pay" value="card" />
+                  <span><strong>کارت‌به‌کارت</strong><span>شمارهٔ کارت بعد از ثبت سفارش پیامک می‌شود</span></span>
+                </label>
+                <label class="pay">
+                  <input type="radio" name="pay" value="cod" />
+                  <span><strong>پرداخت در محل</strong><span>تهران و کرج — ۴۵٬۰۰۰ تومان اضافه</span></span>
+                </label>
+              </div>
+              <label class="check" style="margin-top: 16px">
+                <input type="checkbox" name="terms" />
+                <span><a href="guide.html#safety" style="color: var(--yellow)">قوانین فروش و بهداشت</a> را خوانده‌ام و سنم بالای ۱۸ سال است.</span>
+              </label>
+            </div>
+            <div class="cart-actions">
+              <button class="btn btn--ghost btn--sm" type="button" data-prev>بازگشت</button>
+              <button class="btn btn--yellow" type="button" data-place>ثبت نهایی سفارش <span data-icon="check"></span></button>
+            </div>
+          </div>
+
+          <div data-success hidden></div>
+        </div>
+
+        <aside class="summary" data-summary aria-label="خلاصهٔ سفارش"></aside>
+      </section>
+    </main>
+
+    <div data-chrome="footer"></div>
+
+    <script src="assets/js/icons.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/cart.js"></script>
+  </body>
+</html>

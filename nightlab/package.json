@@ -1,0 +1,14 @@
+{
+  "name": "nightlab-boutique",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NIGHTLAB — discreet adult boutique storefront (static, no build step)",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "verify": "node scripts/verify.mjs",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "engines": { "node": ">=18" }
+}

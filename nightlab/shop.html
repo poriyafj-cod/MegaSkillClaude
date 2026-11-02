@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>فروشگاه | نایت‌لب</title>
+    <meta name="description" content="کالکشن نایت‌لب: ویبراتور و ماساژور، محصولات زوج، لوبریکانت، لوازم بستن نرم و بهداشت — با فیلتر قیمت و ویژگی." />
+    <meta name="theme-color" content="#08090b" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800;900&family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body data-page="shop">
+    <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
+    <div data-chrome="header"></div>
+
+    <main id="main">
+      <section class="page-head">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="مسیر صفحه">
+            <a href="index.html">خانه</a>
+            <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+            <span aria-current="page">فروشگاه</span>
+          </nav>
+          <h1 class="h-1" style="margin-top: 10px">همهٔ کالکشن</h1>
+          <p class="lead" style="margin-top: 8px; max-width: 62ch">
+            هر قلم با مشخصات کامل و بسته‌بندی بی‌نام. اگر مطمئن نیستی از کجا شروع کنی،
+            <a href="guide.html" style="color: var(--yellow)">راهنمای انتخاب</a> را ببین.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container shop-layout">
+          <aside class="filters" id="filters" aria-label="فیلترها">
+            <div class="filters__head">
+              <strong>فیلترها</strong>
+              <button class="icon-btn filters__close" type="button" data-close-filters aria-label="بستن فیلترها">
+                <span data-icon="close"></span>
+              </button>
+            </div>
+
+            <div class="filter-group">
+              <h4>دسته‌بندی</h4>
+              <div class="filter-list" data-filter-cats></div>
+            </div>
+
+            <div class="filter-group">
+              <h4>حداکثر قیمت</h4>
+              <input class="range" type="range" min="200000" max="3000000" step="50000" value="3000000" data-filter-price aria-label="حداکثر قیمت" />
+              <div class="range-value"><span>۲۰۰٬۰۰۰</span><span data-price-label>۳٬۰۰۰٬۰۰۰ تومان</span></div>
+            </div>
+
+            <div class="filter-group">
+              <h4>ویژگی‌ها</h4>
+              <div class="filter-list">
+                <label><input type="checkbox" data-filter="sale" /> فقط تخفیف‌دار <small data-count-sale></small></label>
+                <label><input type="checkbox" data-filter="instock" /> فقط موجود <small data-count-stock></small></label>
+                <label><input type="checkbox" data-filter="new" /> تازه‌ها <small data-count-new></small></label>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <button class="btn btn--dark btn--sm btn--block" type="button" data-reset>حذف همهٔ فیلترها</button>
+            </div>
+
+            <p class="small muted" style="margin-top: 12px">
+              <span data-icon="lock" style="vertical-align: -2px"></span> خرید و ارسال کاملاً بی‌نام است.
+            </p>
+          </aside>
+
+          <div>
+            <div class="shop-toolbar">
+              <div class="toolbar__count"><b data-count>۱۲</b> محصول پیدا شد</div>
+              <div class="toolbar__right">
+                <button class="chip-btn filters__toggle" type="button" data-open-filters>
+                  <span data-icon="filter"></span> فیلترها
+                </button>
+                <select class="select" data-sort aria-label="مرتب‌سازی">
+                  <option value="popular">محبوب‌ترین</option>
+                  <option value="new">جدیدترین</option>
+                  <option value="price-asc">ارزان‌ترین</option>
+                  <option value="price-desc">گران‌ترین</option>
+                  <option value="rating">بالاترین امتیاز</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="chips" data-chips></div>
+            <div class="product-grid product-grid--3" data-grid></div>
+            <p class="empty-state" data-empty hidden>
+              <span data-icon="search"></span> با این فیلترها چیزی پیدا نشد.
+              <button class="btn btn--dark btn--sm" type="button" data-reset>حذف فیلترها</button>
+            </p>
+            <div style="text-align: center; margin-top: 26px">
+              <button class="btn btn--ghost" type="button" data-more>نمایش محصولات بیشتر</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight section--edge">
+        <div class="container">
+          <div class="features">
+            <div class="feature">
+              <div class="feature__icon" data-icon="package"></div>
+              <h3>بستهٔ بی‌نام</h3>
+              <p>بدون نام فروشگاه، بدون توضیح محتوا روی بسته.</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon" data-icon="refresh"></div>
+              <h3>بازگشت ۷ روزه</h3>
+              <p>اگر بستهٔ پلمب باز نشده باشد، بدون سؤال برمی‌گردانیم.</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon" data-icon="shield"></div>
+              <h3>اصالت کالا</h3>
+              <p>همهٔ محصولات با گارانتی تعویض و کد اصالت.</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon" data-icon="temperature"></div>
+              <h3>نگهداری درست</h3>
+              <p>انبار خنک و خشک، دور از نور مستقیم.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-chrome="footer"></div>
+
+    <script src="assets/js/icons.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/shop.js"></script>
+  </body>
+</html>
