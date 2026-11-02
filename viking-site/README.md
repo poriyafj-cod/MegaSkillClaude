@@ -113,6 +113,7 @@ node scripts/doctor.mjs viking-site        # از ریشهٔ مخزن
 - خروجی، همان فایل‌های استاتیک همین پوشه است؛ هیچ باندل یا مرحلهٔ کامپایلی اجرا نمی‌شود.
 - هدرهای امنیتی/CSP و کش دارایی‌ها از `vercel.json` اعمال می‌شوند (در جدول routeهای deployment قابل بررسی است).
 - آدرس تولیدی (Production): https://viking-offroad.vercel.app/ — نسخهٔ شاخه‌ای: `viking-offroad-git-arena-3a9f2a5d-megaskillclaude-fj-cod.vercel.app`.
+- اتصال Git این پروژه deployment خودکار روی push ندارد (`gitProviderOptions.createDeployments: disabled`)؛ پس از هر تغییر، یک deployment تولیدی جدید از برنچ `arena/3a9f2a5d-megaskillclaude` ساخته می‌شود و نسخهٔ زنده همان کامیت آخرین deployment است، نه آخرین کامیت مخزن.
 - دامنهٔ `viking.offroad` هنوز به این پروژه وصل نشده است.
 
 دفتر جریان این پروژه در [PROGRESS.md](PROGRESS.md) و دستور کامل توسعه در [`docs/directives/13-viking-site.md`](../docs/directives/13-viking-site.md) است.
