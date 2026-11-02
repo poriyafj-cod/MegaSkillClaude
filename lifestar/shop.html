@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>فروشگاه نوشیدنی انرژی‌زا | لایف استار</title>
+    <meta name="description" content="همهٔ ۱۲ طعم لایف استار: انرژی کلاسیک، زیرو شکر، کافئین غلیظ و بازیابی. فیلتر بر اساس دسته، کافئین و قیمت." />
+    <meta name="theme-color" content="#07070a" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800;900&family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body data-page="shop">
+    <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
+    <div data-chrome="header"></div>
+
+    <main id="main">
+      <section class="page-head">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="مسیر صفحه">
+            <a href="index.html">خانه</a>
+            <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+            <span aria-current="page">فروشگاه</span>
+          </nav>
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; flex-wrap: wrap">
+            <div>
+              <h1 class="h-1" data-title>همهٔ نوشیدنی‌ها</h1>
+              <p class="lead" style="margin-top: 8px" data-sub>از گیلاس ترش تا کارامل کافی — طعمت را انتخاب کن و پک ببند.</p>
+            </div>
+            <span class="pill pill--volt">ارسال سرد ۲۴ ساعته</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container shop-layout">
+          <aside class="filters" data-filters aria-label="فیلترها">
+            <div class="filters__head">
+              <h2>فیلترها</h2>
+              <button class="icon-btn" type="button" data-close-filters aria-label="بستن فیلترها" style="display: none">
+                <span data-icon="close"></span>
+              </button>
+            </div>
+
+            <div class="filters__group">
+              <h3 class="filters__title">دسته‌بندی</h3>
+              <div class="filter-list" data-filter-cats></div>
+            </div>
+
+            <div class="filters__group">
+              <h3 class="filters__title">حداکثر قیمت</h3>
+              <div class="price-range">
+                <input type="range" data-price aria-label="حداکثر قیمت" />
+                <div class="price-range__labels"><span>۶۰٬۰۰۰ تومان</span><span data-price-label></span></div>
+              </div>
+            </div>
+
+            <div class="filters__group">
+              <h3 class="filters__title">ویژگی‌ها</h3>
+              <div class="filter-list">
+                <label class="filter-opt"><input type="checkbox" data-zero /> فقط زیرو شکر</label>
+                <label class="filter-opt"><input type="checkbox" data-sale /> فقط تخفیف‌دار</label>
+                <label class="filter-opt"><input type="checkbox" data-stock /> فقط موجود</label>
+              </div>
+            </div>
+
+            <button class="btn btn--block btn--sm" type="button" data-close-filters style="margin-top: 18px; display: none">
+              دیدن نتایج
+            </button>
+          </aside>
+
+          <div>
+            <div class="shop-toolbar">
+              <div class="cluster">
+                <button class="chip-btn filter-toggle" type="button" data-open-filters>
+                  <span data-icon="filter"></span> فیلترها
+                </button>
+                <span class="result-count" data-count></span>
+              </div>
+              <label class="cluster" style="gap: 8px">
+                <span class="small muted">مرتب‌سازی:</span>
+                <select class="select select--sort" data-sort aria-label="مرتب‌سازی">
+                  <option value="popular">محبوب‌ترین</option>
+                  <option value="newest">جدیدترین</option>
+                  <option value="price-asc">ارزان‌ترین</option>
+                  <option value="price-desc">گران‌ترین</option>
+                  <option value="caffeine">بیشترین کافئین</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="active-filters" data-chips></div>
+            <div class="product-grid" data-grid></div>
+            <div class="load-more-wrap" data-load-wrap hidden>
+              <button class="btn btn--ghost" type="button" data-load>نمایش محصولات بیشتر</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div class="features">
+            <article class="feature"><span class="feature__icon" data-icon="truck"></span>
+              <div><h3>ارسال سریع</h3><p>تهران ۲۴ ساعته، شهرستان ۳ روز.</p></div></article>
+            <article class="feature"><span class="feature__icon" data-icon="snow"></span>
+              <div><h3>بسته‌بندی سرد</h3><p>طعم تا لحظهٔ باز کردن تازه می‌ماند.</p></div></article>
+            <article class="feature"><span class="feature__icon" data-icon="shield"></span>
+              <div><h3>ضمانت اصالت</h3><p>مستقیم از خط تولید، با تاریخ معتبر.</p></div></article>
+            <article class="feature"><span class="feature__icon" data-icon="tag"></span>
+              <div><h3>پک اقتصادی</h3><p>تا ۲۲٪ ارزان‌تر در پک ۲۴ عددی.</p></div></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-chrome="footer"></div>
+
+    <script src="assets/js/icons.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/shop.js"></script>
+  </body>
+</html>

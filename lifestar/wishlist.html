@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>علاقه‌مندی‌ها | لایف استار</title>
+    <meta name="description" content="نوشیدنی‌های ذخیره‌شدهٔ تو در لایف استار." />
+    <meta name="theme-color" content="#07070a" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800;900&family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body data-page="wishlist">
+    <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
+    <div data-chrome="header"></div>
+
+    <main id="main">
+      <section class="page-head">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="مسیر صفحه">
+            <a href="index.html">خانه</a>
+            <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+            <span aria-current="page">علاقه‌مندی‌ها</span>
+          </nav>
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+            <div>
+              <h1 class="h-1">علاقه‌مندی‌های من</h1>
+              <p class="lead" style="margin-top: 8px">هر قوطی که قلبش را زدی، اینجا نگه داشته شده.</p>
+            </div>
+            <span class="pill" data-wish-count-label>۰ نوشیدنی</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div class="cluster" style="justify-content: flex-end; margin-bottom: 18px">
+            <button class="btn btn--volt btn--sm" type="button" data-wish-bulk hidden><span data-icon="cart"></span> افزودن همه به سبد</button>
+          </div>
+          <div class="product-grid" data-wish-grid></div>
+        </div>
+      </section>
+    </main>
+
+    <div data-chrome="footer"></div>
+
+    <script src="assets/js/icons.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/wishlist.js"></script>
+  </body>
+</html>

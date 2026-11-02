@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>سبد خرید و تسویه | لایف استار</title>
+    <meta name="description" content="سبد خرید لایف استار، کد تخفیف، اطلاعات ارسال و پرداخت در سه مرحله." />
+    <meta name="theme-color" content="#07070a" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800;900&family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body data-page="cart">
+    <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
+    <div data-chrome="header"></div>
+
+    <main id="main">
+      <section class="page-head">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="مسیر صفحه">
+            <a href="index.html">خانه</a>
+            <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+            <span aria-current="page">سبد خرید</span>
+          </nav>
+          <h1 class="h-1">سبد خرید و تکمیل سفارش</h1>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div data-success hidden></div>
+
+          <div class="cart-layout" data-checkout>
+            <div>
+              <div class="steps" data-steps></div>
+
+              <div data-step-panel="1">
+                <div class="card">
+                  <h2 class="card__title"><span data-icon="cart"></span> اقلام سبد</h2>
+                  <div data-cart></div>
+                </div>
+                <div class="cluster" style="margin-top: 16px; justify-content: space-between">
+                  <a class="btn btn--ghost" href="shop.html">ادامهٔ خرید</a>
+                  <button class="btn btn--volt" type="button" data-next>ادامه و ثبت اطلاعات <span data-icon="arrowLeft"></span></button>
+                </div>
+              </div>
+
+              <form data-form novalidate hidden data-step-panel="2">
+                <div class="card">
+                  <h2 class="card__title"><span data-icon="truck"></span> اطلاعات ارسال</h2>
+                  <div class="form-grid">
+                    <div class="field">
+                      <label for="f-name">نام و نام خانوادگی <span class="req">*</span></label>
+                      <input class="input" id="f-name" name="name" autocomplete="name" />
+                      <span class="field__error" data-err="name"></span>
+                    </div>
+                    <div class="field">
+                      <label for="f-phone">شمارهٔ موبایل <span class="req">*</span></label>
+                      <input class="input" id="f-phone" name="phone" inputmode="tel" placeholder="۰۹۱۲۳۴۵۶۷۸۹" autocomplete="tel" />
+                      <span class="field__error" data-err="phone"></span>
+                    </div>
+                    <div class="field">
+                      <label for="f-province">استان <span class="req">*</span></label>
+                      <select class="select" id="f-province" name="province">
+                        <option value="">انتخاب کن</option>
+                        <option>تهران</option><option>البرز</option><option>اصفهان</option><option>فارس</option>
+                        <option>خراسان رضوی</option><option>آذربایجان شرقی</option><option>گیلان</option>
+                        <option>مازندران</option><option>خوزستان</option><option>سایر</option>
+                      </select>
+                      <span class="field__error" data-err="province"></span>
+                    </div>
+                    <div class="field">
+                      <label for="f-city">شهر <span class="req">*</span></label>
+                      <input class="input" id="f-city" name="city" autocomplete="address-level2" />
+                      <span class="field__error" data-err="city"></span>
+                    </div>
+                    <div class="field span-2">
+                      <label for="f-address">نشانی کامل پستی <span class="req">*</span></label>
+                      <textarea class="textarea" id="f-address" name="address" style="min-height: 90px"></textarea>
+                      <span class="field__error" data-err="address"></span>
+                    </div>
+                    <div class="field">
+                      <label for="f-postal">کد پستی <span class="req">*</span></label>
+                      <input class="input" id="f-postal" name="postal" inputmode="numeric" />
+                      <span class="field__error" data-err="postal"></span>
+                    </div>
+                    <div class="field">
+                      <label for="f-note">توضیح سفارش (اختیاری)</label>
+                      <input class="input" id="f-note" name="note" />
+                    </div>
+                  </div>
+                </div>
+                <div class="cluster" style="margin-top: 16px; justify-content: space-between">
+                  <button class="btn btn--ghost" type="button" data-prev>بازگشت به سبد</button>
+                  <button class="btn btn--volt" type="button" data-next>ادامه به پرداخت <span data-icon="arrowLeft"></span></button>
+                </div>
+              </form>
+
+              <div data-step-panel="3" hidden>
+                <div class="card">
+                  <h2 class="card__title"><span data-icon="card"></span> روش پرداخت</h2>
+                  <div class="pay-methods" data-pays>
+                    <label class="pay is-active" data-pay="online">
+                      <input type="radio" name="pay" value="online" checked />
+                      <span class="pay__text"><strong>پرداخت آنلاین</strong><span>درگاه بانکی — همهٔ کارت‌های شتاب</span></span>
+                    </label>
+                    <label class="pay" data-pay="card">
+                      <input type="radio" name="pay" value="card" />
+                      <span class="pay__text"><strong>کارت‌به‌کارت</strong><span>شمارهٔ کارت بعد از ثبت سفارش پیامک می‌شود</span></span>
+                    </label>
+                    <label class="pay" data-pay="cod">
+                      <input type="radio" name="pay" value="cod" />
+                      <span class="pay__text"><strong>پرداخت در محل</strong><span>تهران و کرج — ۳۰٬۰۰۰ تومان اضافه</span></span>
+                    </label>
+                  </div>
+                  <label class="check" style="margin-top: 18px">
+                    <input type="checkbox" name="terms" />
+                    <span><a href="contact.html" style="text-decoration: underline">قوانین فروش</a> و شرایط مرجوعی را خوانده‌ام و می‌پذیرم.</span>
+                  </label>
+                </div>
+                <div class="cluster" style="margin-top: 16px; justify-content: space-between">
+                  <button class="btn btn--ghost" type="button" data-prev>بازگشت</button>
+                  <button class="btn btn--volt btn--lg" type="button" data-place><span data-icon="checkCircle"></span> ثبت نهایی سفارش</button>
+                </div>
+              </div>
+            </div>
+
+            <aside class="summary" data-summary></aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-chrome="footer"></div>
+
+    <script src="assets/js/icons.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/cart.js"></script>
+  </body>
+</html>

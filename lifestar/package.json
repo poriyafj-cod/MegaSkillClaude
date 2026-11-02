@@ -1,0 +1,13 @@
+{
+  "name": "lifestar-energy-shop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LIFE STAR — Persian energy drink storefront (static, no build step)",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "verify": "node scripts/verify.mjs",
+    "check": "node scripts/verify.mjs"
+  }
+}
