@@ -1,6 +1,9 @@
 # PROGRESS — NIGHTLAB (بوتیک بزرگسالان)
 
-## وضعیت: نسخهٔ ۱٫۰ آمادهٔ نمایش و انتشار
+## وضعیت: نسخهٔ ۱٫۰ منتشر شد
+
+**لینک زنده:** https://nightlab-boutique.vercel.app
+پروژهٔ Vercel: `nightlab-boutique` · دیپلوی `dpl_5mc7r31ML88a31UxzXXD6JMXvti5` · commit `c004c1ab`
 
 ### انجام‌شده
 - [x] پردازش عکس بنیان‌گذار → `founder-portrait.jpg` / `founder-poster.jpg` (چاپ سیلک زرد) / `founder-avatar.jpg`
@@ -20,6 +23,11 @@
 node scripts/verify.mjs  → 9 pages · 12 products · 5 categories ✓
 node scripts/smoke.mjs   → 69 assertions passed ✓
 ```
+
+### اصلاحات بعد از انتشار
+- [x] ارقام فارسی برای درصد تخفیف‌ها
+- [x] `[hidden]` سراسری تا حالت‌های خالی/نشان‌ها با کلاس‌های display تداخل نکنند
+- [x] حذف پرش محتوا: نوار تسویه و دکمهٔ «بیشتر» از ابتدا پنهان
 
 ### باقی‌مانده (اختیاری)
 - [ ] عکس واقعی محصولات
