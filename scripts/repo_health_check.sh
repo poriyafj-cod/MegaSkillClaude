@@ -35,7 +35,8 @@ for file in README.md .env.example .github/workflows/ci.yml \
   fjcod/package-lock.json bison-brand-book/package.json \
   bison-brand-book/package-lock.json hermes/package.json hermes/package-lock.json \
   hermes/setup.sh orchestrator/scripts/audit/check_repository_contract.py \
-  viking-team/team/index.html viking-team/team/styles.css viking-team/team/app.js; do
+  viking-team/team/index.html viking-team/team/styles.css viking-team/team/app.js \
+  viking-site/index.html viking-site/styles.css viking-site/app.js viking-site/vercel.json; do
   [ -s "$file" ] || fail "Missing or empty required file: $file"
 done
 
@@ -53,6 +54,8 @@ run_check lithos node --check api/buffer-sync.js
 run_check hermes bash -n setup.sh
 run_check hermes npm --ignore-scripts run check
 run_check viking-team node --check --input-type=module < viking-team/team/app.js
+run_check viking-site node --check app.js
+run_check viking-site python3 -m unittest discover -s tests
 run_check orchestrator python3 scripts/audit/check_repository_contract.py
 
 # Inspect tracked dotenv NAMES only. Never print matching lines or secret values,

@@ -36,6 +36,9 @@ class HealthCheckTests(unittest.TestCase):
             'orchestrator/scripts/audit/check_repository_contract.py',
             'viking-team/team/index.html', 'viking-team/team/styles.css',
             'viking-team/team/app.js',
+            'viking-site/index.html', 'viking-site/styles.css',
+            'viking-site/app.js', 'viking-site/vercel.json',
+
         ]
         for name in files:
             file = self.root / name

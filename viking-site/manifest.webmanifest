@@ -1,0 +1,17 @@
+{
+  "name": "وایکینگ آفرود — تور، کمپ و طبیعت‌گردی",
+  "short_name": "وایکینگ آفرود",
+  "description": "تور آفرود، کمپ فول‌برد و طبیعت‌گردی هدایت‌شده؛ گروه کوچک، تجهیزات کامل و راهنمای محلی.",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0A0A09",
+  "theme_color": "#0A0A09",
+  "icons": [
+    { "src": "assets/img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

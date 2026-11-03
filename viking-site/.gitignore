@@ -1,0 +1,4 @@
+# Local visual-review output only; never commit generated screenshots.
+/build/
+/out/
+/screenshots/

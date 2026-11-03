@@ -117,6 +117,14 @@ const PROJECTS = [
     ],
   },
   {
+    id: 'viking-site', folder: 'viking-site', label: 'وب‌سایت عمومی وایکینگ آفرود',
+    steps: [
+      {name: 'static-contract', cmd: 'python3 -m unittest discover -s tests -v', cwd: 'viking-site', why: 'دارایی محلی، ARIA، فرم، پالت، JSON-LD، امنیت و Vercel'},
+      {name: 'js-syntax', cmd: 'node --check app.js', cwd: 'viking-site', why: 'نحو تعامل‌های صفحه'},
+      {name: 'no-secret-keys', cmd: "! grep -R -E 'service_role|sb_secret_' . --include='*.js' --include='*.html'", cwd: 'viking-site', shell: true, why: 'هیچ کلید مدیریتی در سایت عمومی نیست'},
+    ],
+  },
+  {
     id: 'viking-motion', folder: 'viking-team/motion', label: 'Viking Cinematic Motion Study (prototype)',
     needs: ['viking-team/motion/node_modules'],
     steps: [

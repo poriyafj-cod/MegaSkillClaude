@@ -43,6 +43,11 @@ PROJECTS = {
         "docs/directives/10-viking-content-renderer.md",
     ),
     "mobile": ("mobile/PROGRESS.md", "mobile/README.md", "docs/directives/11-mobile-console.md"),
+    "viking-site": (
+        "viking-site/PROGRESS.md",
+        "viking-site/README.md",
+        "docs/directives/13-viking-site.md",
+    ),
 }
 
 
