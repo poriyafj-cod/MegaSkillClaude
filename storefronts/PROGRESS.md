@@ -54,6 +54,8 @@ node scripts/doctor.mjs storefronts router repo
   از این پس یک قرارداد مشترک دارند.
 - **۲۰۲۶-۱۱-۰۶ (اجرا و گیت)** — `storefronts` به `scripts/doctor.mjs` (شناسهٔ `storefronts`)، جدول پروژه‌های
   `README.md`، `docs/directives/13-storefront-studio.md`، `ROADMAP.md` و کارت‌های کنسول آیفون اضافه شد.
-  سه گیت CI (fixture، بررسی ایستا، تست مستندات) به job ریشه اضافه شد. شمارنده‌های router به
+  گیت‌های fixture/بررسی ایستا/مستندات با `doctor storefronts` اجرا می‌شوند؛ افزودنشان به
+  `.github/workflows/ci.yml` **انجام نشد** چون توکن GitHub این محیط مجوز `workflows` ندارد
+  (push رد شد) — بند باز است و باید با مجوز مناسب یا از UI گیت‌هاب اضافه شود. شمارنده‌های router به
   ۶٬۰۲۰ / ۵٬۷۳۹ / ۳۰٬۰۸۶ هم‌گام و ایندکس PWA بازتولید شد. نتیجه: ۶۶ تست ریشه، ۵ تست fixture و
   doctor `repo`+`storefronts`+`router`+`mobile` سبز. رندر مرورگری، Lighthouse و دیپلوی زنده انجام **نشده** است.
