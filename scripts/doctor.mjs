@@ -132,6 +132,14 @@ const PROJECTS = [
     ],
   },
   {
+    id: 'storefronts', folder: 'storefronts', label: 'Storefront Studio (استاندارد طراحی فروشگاه)',
+    steps: [
+      {name: 'gate-contract', cmd: 'node --test storefronts/tests/storefront-check.test.mjs', why: 'گیت روی fixture خوب سبز و روی fixture بد قرمز می‌شود' },
+      {name: 'static-audit', cmd: 'node storefronts/scripts/storefront-check.mjs --all', why: 'قرارداد RTL/توکن/فوکوس/reduced-motion سایت‌های داخل مخزن' },
+      {name: 'docs', cmd: 'python3 -m unittest tests.test_storefront_studio', why: 'سیستم طراحی، فهرست سایت‌ها و ثبت شمارنده‌ها هم‌خوان‌اند' },
+    ],
+  },
+  {
     id: 'router', folder: 'plugins/mega-skills-router', label: 'مسیریاب و کتابخانهٔ مهارت‌ها',
     steps: [
       {name: 'sync', cmd: 'python3 scripts/sync_skill_library.py --check', why: 'پلاگین با منبع canonical یکسان'},

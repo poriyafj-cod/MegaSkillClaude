@@ -1,6 +1,6 @@
 # web-development
 
-Skills: 1833
+Skills: 1834
 
 - `1688-product-detail` → `references/skills/1688-product-detail/INSTRUCTIONS.md` [incomplete: excluded from default routing]
 - `2slides-ppt-generator` → `references/skills/2slides-ppt-generator/INSTRUCTIONS.md`
@@ -1597,6 +1597,7 @@ Skills: 1833
 - `status-page-maker` → `references/skills/status-page-maker/INSTRUCTIONS.md`
 - `stitch-loop` → `references/skills/stitch-loop/INSTRUCTIONS.md`
 - `stitch-ui-design` → `references/skills/stitch-ui-design/INSTRUCTIONS.md`
+- `storefront-design-system` → `references/skills/storefront-design-system/INSTRUCTIONS.md`
 - `strategy-red-team` → `references/skills/strategy-red-team/INSTRUCTIONS.md`
 - `stress-test` → `references/skills/stress-test/INSTRUCTIONS.md`
 - `stripe-integration` → `references/skills/stripe-integration/INSTRUCTIONS.md`

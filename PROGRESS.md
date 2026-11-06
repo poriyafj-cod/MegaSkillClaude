@@ -1,11 +1,12 @@
 # MegaSkillClaude Monorepo — دفتر جریان مشترک
 
-> این دفتر فقط تغییرات cross-project (CI، doctor، نقشهٔ پروژه‌ها و قراردادهای مشترک) را نگه می‌دارد. هر محصول دفتر جداگانهٔ خودش را دارد. آخرین به‌روزرسانی: **۲۰۲۶-۱۰-۱۴**.
+> این دفتر فقط تغییرات cross-project (CI، doctor، نقشهٔ پروژه‌ها و قراردادهای مشترک) را نگه می‌دارد. هر محصول دفتر جداگانهٔ خودش را دارد. آخرین به‌روزرسانی: **۲۰۲۶-۱۱-۰۶**.
 
 ## ۱) وضعیت مشترک
-- ۱۲ پروژه/زیرپروژهٔ مدیریت‌شده (به‌علاوهٔ خود مخزن)؛ دفتر هرکدام در جدول `README.md` و دستور توسعهٔ هرکدام در [`docs/directives/`](docs/directives/README.md) است.
+- ۱۳ پروژه/زیرپروژهٔ مدیریت‌شده (به‌علاوهٔ خود مخزن)؛ دفتر هرکدام در جدول `README.md` و دستور توسعهٔ هرکدام در [`docs/directives/`](docs/directives/README.md) است.
 - `node scripts/doctor.mjs <id>` مرجع فرمان‌های دقیق هر پروژه است؛ `--list` فهرست کامل را نشان می‌دهد.
-- Router canonical: **۶٬۰۱۹** مهارت = ۳٬۰۰۰ core + ۸ پروژه + ۳٬۰۱۱ GitHub؛ **۵٬۷۳۸ routable**، **۲۸۱ incomplete** و **۳۰٬۰۸۰ trigger**.
+- Router canonical: **۶٬۰۲۰** مهارت = ۳٬۰۰۰ core + ۹ پروژه + ۳٬۰۱۱ GitHub؛ **۵٬۷۳۹ routable**، **۲۸۱ incomplete** و **۳۰٬۰۸۶ trigger**.
+- **Storefront Studio** (`storefronts/`) اضافه شد: سیستم طراحی canonical سایت فروشگاهی + گیت ایستا + پروفایل NAFAS/NIGHTLAB/LIFESTAR؛ شناسهٔ doctor: `storefronts`.
 - CI شامل typecheck/build/test، health، skill sync، PWA، دارایی‌های برند و typecheck زیرپروژهٔ Motion است.
 
 ## ۲) اصلاحات بین‌پروژه‌ای
@@ -43,5 +44,12 @@ node scripts/doctor.mjs --json
 - [ ] Safari/iPhone فیزیکی و سرویس‌های زنده را جداگانه آزمایش کن؛ شبیه‌سازی Chromium معادل تأیید iOS یا RLS نیست.
 
 ## ۵) لاگ جریان (افزایشی)
+- **۲۰۲۶-۱۱-۰۶ (Storefront Studio)** — استاندارد مشترک طراحی فروشگاه‌ها ساخته شد: `storefronts/design-system/MASTER.md`
+  (هفت ستون، توکن برند، تایپوگرافی فارسی، ۱۷ کامپوننت، بودجهٔ کارایی، DoD)، چهار قرارداد صفحه، `motion-3d.md`،
+  هفت گیت انتشار، `sites.json` با پروفایل NAFAS/NIGHTLAB/LIFESTAR (از صفحات واقعی زنده) و CHAM،
+  موتور بررسی `storefronts/scripts/storefront-check.mjs` + تست fixture، و مهارت `storefront-design-system` در router.
+  شمارنده‌های router/README/PWA به ۶٬۰۲۰ / ۵٬۷۳۹ / ۳۰٬۰۸۶ هم‌گام شدند و `storefronts` به doctor، جدول پروژه‌ها،
+  directive 13 و کارت‌های کنسول آیفون اضافه شد. نتیجهٔ واقعی: doctor `storefronts` و `repo` سبز، ۶۶ تست ریشه سبز.
+  محدودیت: سه سایت زنده در این مخزن کلون نیستند؛ گیت/Lighthouse/تجربهٔ موبایلشان تأییدنشده است.
 - **۲۰۲۶-۱۰-۱۴** — فرمان‌ها و test discovery در doctor اصلاح شدند؛ regression parser به CI اضافه شد؛ root ۵۶ تست سبز؛ router canonical به اعداد جاری همگام شد.
 - **۲۰۲۶-۱۰-۱۴ (full validation)** — ابزارهای موقت pytest/Deno/Chromium در دسترس قرار گرفتند؛ full doctor برای هر ۱۳ دامنه و ۳۸ مرحله سبز شد؛ CHAM E2E دوباره ۱۹/۱۹ پاس شد، Orchestrator Deno ۷/۷، PWA موبایل در حالت online/offline smoke شد و Motion MP4 واقعی رندر/با ffprobe بررسی شد. محدودیت Safari واقعی و backend/deployment زنده همچنان باز است.

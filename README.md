@@ -18,6 +18,7 @@
 | **کنسول آیفون مگااسکیل** — PWA جست‌وجوی مهارت/دستور تست | `mobile/` | `node scripts/doctor.mjs mobile` | [PROGRESS](mobile/PROGRESS.md) · [README](mobile/README.md) | [11](docs/directives/11-mobile-console.md) |
 | **استیکرهای وایکینگ آفرود** — ۱۲ پک PNG و سورس | `brands/viking-offroad/` | `node scripts/doctor.mjs brand-stickers` | [PROGRESS](brands/viking-offroad/PROGRESS.md) · [README](brands/viking-offroad/stickers/README.md) | [09](docs/directives/09-viking-brand-assets.md) |
 | **قالب پست/استوری وایکینگ** — HTML به PNG با Playwright | `brand/viking/` | `node scripts/doctor.mjs brand-viking` | [PROGRESS](brand/viking/PROGRESS.md) · [README](brand/viking/README.md) | [10](docs/directives/10-viking-content-renderer.md) |
+| **Storefront Studio** — سیستم طراحی و گیت سایت فروشگاهی (NAFAS، NIGHTLAB، LIFESTAR) | `storefronts/` | `node scripts/doctor.mjs storefronts` | [PROGRESS](storefronts/PROGRESS.md) · [README](storefronts/README.md) | [13](docs/directives/13-storefront-studio.md) |
 
 ## بررسی و دیباگ پروژه‌ها
 

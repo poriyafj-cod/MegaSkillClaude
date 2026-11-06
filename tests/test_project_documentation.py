@@ -43,6 +43,7 @@ PROJECTS = {
         "docs/directives/10-viking-content-renderer.md",
     ),
     "mobile": ("mobile/PROGRESS.md", "mobile/README.md", "docs/directives/11-mobile-console.md"),
+    "storefronts": ("storefronts/PROGRESS.md", "storefronts/README.md", "docs/directives/13-storefront-studio.md"),
 }
 
 
@@ -91,7 +92,7 @@ class ProjectDocumentationTests(unittest.TestCase):
         self.assertEqual(counts["skills"], len(router_index["skills"]))
         self.assertEqual(counts["incomplete_skills"], 281)
         self.assertEqual(counts["routable_skills"], counts["skills"] - counts["incomplete_skills"])
-        self.assertEqual(len(project_skills), 8)
+        self.assertEqual(len(project_skills), 9)
         self.assertEqual(len(github_index), 3011)
 
         docs = {

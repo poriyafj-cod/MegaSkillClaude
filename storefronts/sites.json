@@ -1,0 +1,162 @@
+{
+ "schema": "mega-storefronts/v1",
+ "updated": "2026-11-06",
+ "note": "Sites built with the storefront design system. 'checkout' is a path in this repository; empty means the site lives in its own Vercel project and is not cloned here yet. Content facts below were read from the live pages on 2026-11-06; they are a design reference, not a claim about sales or traffic.",
+ "defaults": {
+  "direction": "rtl",
+  "lang": "fa",
+  "digits": "persian",
+  "fonts": [
+   "Vazirmatn",
+   "Markazi Text",
+   "Bodoni Moda"
+  ],
+  "pages": [
+   "index.html",
+   "shop.html",
+   "product.html",
+   "about.html",
+   "contact.html",
+   "shipping.html",
+   "returns.html",
+   "privacy.html",
+   "terms.html"
+  ],
+  "design_system": "storefronts/design-system/MASTER.md"
+ },
+ "sites": [
+  {
+   "id": "nafas",
+   "brand": "NAFAS",
+   "brand_fa": "نفس",
+   "category": "اکسسوری دخترانه (گردنبند، گوشواره، حلقه، اکسسوری مو، کیف)",
+   "live": "https://nafas-accessories.vercel.app/",
+   "checkout": "",
+   "status": "live",
+   "positioning": "«استایلت رو خودت تعریف کن» — قطعات دست‌ساز/پریمیوم با آبکاری چندلایه، قیمت منصفانه، لحن دوستانه و بی‌ریتوش.",
+   "palette": {
+    "bg": "#F3EBDD",
+    "fg": "#12213F",
+    "accent": "#7A4E9C",
+    "accent_alt": "#C9A227",
+    "note": "کرم/بنفش برند با لهجهٔ طلایی"
+   },
+   "type": {
+    "display": "Vazirmatn / Markazi Text",
+    "latin": "Bodoni Moda"
+   },
+   "signature_modules": [
+    "hero با استایل شماره",
+    "countdown کالکشن محدود",
+    "lookbook/KONTAKT 12 قاب بدون ریتوش",
+    "contact sheet",
+    "cart drawer"
+   ],
+   "currency": "IRT",
+   "shipping": "ارسال رایگان بالای ۱٬۲۰۰٬۰۰۰ تومان؛ تهران ۲۴–۴۸ ساعت، شهرستان ۳–۵ روز",
+   "returns": "۷ روز مرجوعی",
+   "gates": {
+    "static": "pending-clone",
+    "live_mobile": "unverified",
+    "lighthouse": "unverified"
+   },
+   "kind": "storefront",
+   "open_findings": [
+    "404 page builds relative links, so a nested URL (/assets/css/x) links 'home' to /assets/css/index.html — use absolute / paths",
+    "Product links are authored as /product.html?p=... but the live rewrite serves /product?p=...; pick one canonical form"
+   ]
+  },
+  {
+   "id": "nightlab",
+   "brand": "NIGHTLAB",
+   "brand_fa": "نایت‌لب",
+   "category": "بوتیک بزرگسالان ۱۸+ (محصول بهداشتی/سیلیکون پزشکی)",
+   "live": "https://nightlab-boutique.vercel.app/",
+   "checkout": "",
+   "status": "live",
+   "positioning": "«دقتِ یک آزمایشگاه، حریمِ یک شبِ خصوصی» — بسته‌بندی بی‌نام، ارسال ۲۴ ساعته، پرداخت خصوصی.",
+   "palette": {
+    "bg": "#0B0B0F",
+    "fg": "#F5F2EC",
+    "accent": "#B6A0FF",
+    "note": "مشکی/سرمه‌ای تیره با لهجهٔ بنفش سرد"
+   },
+   "type": {
+    "display": "Vazirmatn (Bold/Black)",
+    "latin": "Inter wide-tracking"
+   },
+   "signature_modules": [
+    "age gate ۱۸+",
+    "kit builder انتخاب ۳ قلم",
+    "trust grid چهارستونه",
+    "newsletter خصوصی"
+   ],
+   "currency": "IRT",
+   "safety": "دروازهٔ سن، متن خنثی، بدون ذخیرهٔ داده؛ تصویر og خنثی.",
+   "gates": {
+    "static": "pending-clone",
+    "live_mobile": "unverified",
+    "lighthouse": "unverified"
+   },
+   "kind": "storefront",
+   "open_findings": [
+    "Age gate stores only a browser flag and states it saves nothing — keep that promise if analytics is ever added"
+   ]
+  },
+  {
+   "id": "lifestar",
+   "brand": "LIFE STAR",
+   "brand_fa": "لایف استار",
+   "category": "نوشیدنی انرژی‌زا (۱۲ طعم، خط زیرو، پک باشگاهی)",
+   "live": "https://lifestar-shop.vercel.app/",
+   "checkout": "",
+   "status": "live",
+   "positioning": "«انرژی رو استار کن، برو یه لول بالاتر» — کافئین دقیق و درج‌شده، ارسال سرد، باشگاه‌محور.",
+   "palette": {
+    "bg": "#0A0A0A",
+    "fg": "#F7F7F2",
+    "accent": "#D6FF3F",
+    "accent_alt": "#FF4D2E",
+    "note": "مشکی با لهجهٔ لیمویی/نارنجی"
+   },
+   "type": {
+    "display": "Vazirmatn Black",
+    "latin": "Anton/Inter condensed"
+   },
+   "signature_modules": [
+    "pack builder پله‌ای ۶/۱۲/۲۴",
+    "مقایسهٔ کافئین افقی",
+    "UGC باشگاهی",
+    "نوار هشدار مصرف کافئین"
+   ],
+   "currency": "IRT",
+   "gates": {
+    "static": "pending-clone",
+    "live_mobile": "unverified",
+    "lighthouse": "unverified"
+   },
+   "kind": "storefront",
+   "open_findings": [
+    "Caffeine comparison and 6/12/24 pack ladder are the reference pattern for bundle-builder"
+   ]
+  },
+  {
+   "id": "cham",
+   "brand": "CHAM Store OS",
+   "brand_fa": "چام",
+   "category": "سامانهٔ مدیریت فروش (پنل، نه ویترین)",
+   "live": "",
+   "checkout": "fjcod",
+   "status": "in-repo",
+   "positioning": "لوکس/اصیل/شیک/اقتصادی — پنل فروش با تقویم جلالی و کنترل تخفیف.",
+   "design_system": "fjcod/design-system/cham/MASTER.md",
+   "reference_for": "الگوی canonical توکن + override صفحه در همین مخزن",
+   "gates": {
+    "static": "doctor fjcod",
+    "live_mobile": "unverified",
+    "lighthouse": "unverified"
+   },
+   "kind": "app"
+  }
+ ]
+}

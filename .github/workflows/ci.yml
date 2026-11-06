@@ -37,6 +37,11 @@ jobs:
           node --test brand/viking/tests/render.test.mjs
       - name: Verify the project doctor really discovers quoted Python test patterns
         run: node --test tests/doctor.test.mjs
+      - name: Storefront design-system gate
+        run: |
+          node --test storefronts/tests/storefront-check.test.mjs
+          node storefronts/scripts/storefront-check.mjs --all
+          python3 -m unittest tests.test_storefront_studio
 
   psk:
     runs-on: ubuntu-latest
