@@ -76,6 +76,10 @@ const money = (n) => n;
   check("home: countdown rendered", /\d|۰|۱|۲|۳/.test(d.querySelector('[data-cd="days"]').textContent));
   check("home: hero image present", Boolean(d.querySelector(".hero__photo img")));
   check("home: icons injected", d.querySelectorAll("[data-icon]").length === 0);
+  check("home: contact sheet image", Boolean(d.querySelector("#faces .film__print img[src*='nafas-contact']")));
+  check("home: contact sheet stamp", /۱۲/.test(d.querySelector("#faces .film__stamp").textContent));
+  check("home: contact sheet points", d.querySelectorAll("#faces .film__list li").length === 3);
+  check("home: every brand face image exists", [...d.querySelectorAll("#faces img")].every((img) => img.getAttribute("src").startsWith("assets/img/brand/")));
 }
 
 /* ------------------------------------------------------------------ */
@@ -206,6 +210,8 @@ const money = (n) => n;
   const w = await boot("about.html");
   check("about: header mounted", Boolean(w.document.querySelector(".site-header")));
   check("about: timeline entries", w.document.querySelectorAll(".timeline__item").length === 4);
+  check("about: 4 polaroid faces", w.document.querySelectorAll("#faces .frame").length === 4);
+  check("about: every face has a caption", [...w.document.querySelectorAll("#faces .frame")].every((f) => f.querySelector("figcaption")?.textContent.trim().length > 3));
 }
 {
   const w = await boot("contact.html");

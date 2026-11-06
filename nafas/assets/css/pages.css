@@ -1867,3 +1867,325 @@
   gap: 6px;
   justify-items: center;
 }
+
+/* =========================================================
+   HOME — contact sheet / brand faces ("film room")
+   ========================================================= */
+.film {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(78% 62% at 10% 0%, rgba(255, 143, 211, 0.2), transparent 62%),
+    radial-gradient(62% 54% at 94% 104%, rgba(139, 99, 255, 0.5), transparent 66%),
+    linear-gradient(155deg, #1b1030 0%, #2b1163 48%, #3d1b9e 100%);
+  color: #fff;
+}
+
+.film::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1.4px);
+  background-size: 20px 20px;
+  opacity: 0.25;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 72%);
+  mask-image: linear-gradient(180deg, #000 0%, transparent 72%);
+}
+
+.film__grid {
+  position: relative;
+  display: grid;
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+}
+
+@media (min-width: 940px) {
+  .film__grid {
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  }
+}
+
+/* --- print ---------------------------------------------------- */
+.film__media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.film__print {
+  position: relative;
+  width: min(430px, 100%);
+  margin: 0;
+  padding: 12px 12px 54px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow:
+    0 44px 90px -38px rgba(8, 3, 24, 0.9),
+    0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+  rotate: -1.8deg;
+  transition:
+    rotate var(--t) var(--ease),
+    scale var(--t) var(--ease);
+}
+
+.film__print:hover {
+  rotate: 0deg;
+  scale: 1.012;
+}
+
+.film__print img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: 50% 3%;
+  border-radius: 2px;
+  background: #1b1030;
+}
+
+.film__caption {
+  position: absolute;
+  inset-inline: 18px;
+  bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 10px;
+  font-family: var(--font-en);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  color: var(--v-700);
+  text-transform: uppercase;
+}
+
+.film__caption span:last-child {
+  color: var(--muted);
+  font-family: var(--font-fa);
+  letter-spacing: 0;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+.film__tape {
+  position: absolute;
+  width: 106px;
+  height: 26px;
+  border-radius: 2px;
+  background: linear-gradient(100deg, rgba(238, 232, 255, 0.86), rgba(216, 205, 250, 0.78));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+.film__tape--a {
+  top: -13px;
+  inset-inline-start: -24px;
+  rotate: -32deg;
+}
+
+.film__tape--b {
+  top: 46%;
+  inset-inline-end: -34px;
+  rotate: 68deg;
+}
+
+.film__stamp {
+  position: absolute;
+  inset-inline-start: -14px;
+  bottom: 24px;
+  display: grid;
+  place-items: center;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: #2d3a00;
+  font-weight: 900;
+  font-size: 0.76rem;
+  line-height: 1.25;
+  text-align: center;
+  box-shadow: var(--sh-md);
+  rotate: -9deg;
+}
+
+/* --- copy ----------------------------------------------------- */
+.film__copy {
+  display: grid;
+  gap: 14px;
+  align-content: center;
+}
+
+.film h2,
+.film h3 {
+  color: #fff;
+}
+
+.film__copy .eyebrow {
+  color: var(--lime);
+}
+
+.film__copy .eyebrow::before {
+  background: var(--lime);
+}
+
+.film__copy .hl {
+  color: var(--lime);
+}
+
+.film__copy .hl::after {
+  background: rgba(220, 255, 122, 0.26);
+}
+
+.film__copy .lead {
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 54ch;
+}
+
+.film__list {
+  display: grid;
+  gap: 12px;
+  margin: 6px 0 4px;
+  padding: 0;
+  list-style: none;
+}
+
+.film__list li {
+  position: relative;
+  padding-inline-start: 26px;
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.film__list li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.62em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 0 4px rgba(220, 255, 122, 0.14);
+}
+
+.film__list b {
+  color: #fff;
+}
+
+.film__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.film__meta div {
+  display: grid;
+  gap: 2px;
+}
+
+.film__meta b {
+  font-family: var(--font-en);
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.film__meta span {
+  font-size: 0.74rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* =========================================================
+   ABOUT — polaroid faces
+   ========================================================= */
+.faces {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 22px);
+}
+
+@media (min-width: 780px) {
+  .faces {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.frame {
+  position: relative;
+  margin: 0;
+  padding: 9px 9px 42px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: var(--sh-md);
+  rotate: -2.2deg;
+  transition:
+    rotate var(--t) var(--ease),
+    translate var(--t) var(--ease),
+    box-shadow var(--t) var(--ease);
+}
+
+.frame:nth-child(2n) {
+  rotate: 1.8deg;
+}
+
+.frame:nth-child(3n) {
+  rotate: 0.8deg;
+}
+
+.frame:hover {
+  rotate: 0deg;
+  translate: 0 -6px;
+  box-shadow: var(--sh-lg);
+}
+
+.frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.frame figcaption {
+  position: absolute;
+  inset-inline: 10px;
+  bottom: 13px;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--v-700);
+}
+
+.frame--small {
+  width: min(182px, 46vw);
+  margin: 26px auto 0;
+  padding-bottom: 40px;
+  rotate: -3.4deg;
+}
+
+.frame--small figcaption {
+  font-size: 0.66rem;
+  line-height: 1.5;
+}
+
+.faces__note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+  margin-top: 22px;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .film__print,
+  .frame {
+    rotate: 0deg;
+    transition: none;
+  }
+}

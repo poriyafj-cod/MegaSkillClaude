@@ -58,7 +58,16 @@ if (slugs.length < 10) notes.push(`only ${slugs.length} products in the catalog`
 if (pages.length < 6) notes.push(`only ${pages.length} html pages`);
 
 /* ---------- 3. brand images ---------- */
-for (const img of ["nafas-hero.jpg", "nafas-look.jpg"]) {
+for (const img of [
+  "nafas-hero.jpg",
+  "nafas-look.jpg",
+  "nafas-og.jpg",
+  "nafas-contact.jpg",
+  "nafas-frame-peace.jpg",
+  "nafas-frame-smile.jpg",
+  "nafas-frame-laugh.jpg",
+  "nafas-frame-peek.jpg",
+]) {
   if (!existsSync(join(ROOT, "assets/img/brand", img))) errors.push(`missing brand image → ${img}`);
 }
 
