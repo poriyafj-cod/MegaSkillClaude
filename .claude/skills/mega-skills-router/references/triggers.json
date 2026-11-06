@@ -1,11 +1,11 @@
 {
  "schema_version": 1,
  "counts": {
-  "skills": 6019,
-  "triggers": 30080,
+  "skills": 6020,
+  "triggers": 30086,
   "colliding_triggers": 0,
   "incomplete_skills": 281,
-  "routable_skills": 5738
+  "routable_skills": 5739
  },
  "domains": {
   "agents-automation": 764,
@@ -22,7 +22,7 @@
   "social-media": 260,
   "travel-outdoors": 439,
   "video-ai": 123,
-  "web-development": 1833
+  "web-development": 1834
  },
  "collisions": [],
  "skills": [
@@ -78538,6 +78538,20 @@
     "hermes skill evolution"
    ],
    "origin": "pack"
+  },
+  {
+   "skill_id": "pack:storefront-design-system",
+   "name": "storefront-design-system",
+   "domain": "web-development",
+   "source_path": "library/skills/storefront-design-system/SKILL.md",
+   "triggers": [
+    "storefront-design-system",
+    "storefront design system",
+    "web development storefront design system",
+    "طراحی سایت فروشگاهی حرفه‌ای سه بعدی",
+    "طراحی صفحه محصول و سبد خرید فروشگاه فارسی",
+    "tarahi site forooshgahi 3d rtl"
+   ]
   }
  ]
 }

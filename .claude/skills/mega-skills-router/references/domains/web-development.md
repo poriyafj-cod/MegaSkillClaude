@@ -1,6 +1,6 @@
 # web-development
 
-Skills: 1833
+Skills: 1834
 
 - `1688-product-detail` → `library/github-skills/1688-product-detail/SKILL.md` [incomplete: excluded from default routing]
 - `2slides-ppt-generator` → `library/github-skills/2slides-ppt-generator/SKILL.md`
@@ -1597,6 +1597,7 @@ Skills: 1833
 - `status-page-maker` → `psk/data/skills/status-page-maker/SKILL.md`
 - `stitch-loop` → `library/github-skills/stitch-loop/SKILL.md`
 - `stitch-ui-design` → `library/github-skills/stitch-ui-design/SKILL.md`
+- `storefront-design-system` → `library/skills/storefront-design-system/SKILL.md`
 - `strategy-red-team` → `library/github-skills/strategy-red-team/SKILL.md`
 - `stress-test` → `library/github-skills/stress-test/SKILL.md`
 - `stripe-integration` → `library/github-skills/stripe-integration/SKILL.md`

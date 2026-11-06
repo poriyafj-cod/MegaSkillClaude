@@ -17,6 +17,7 @@
 | 10 | قالب محتوای وایکینگ | `brand/viking/` | [10-viking-content-renderer.md](10-viking-content-renderer.md) | smoke render واقعی با Chromium |
 | 11 | کنسول آیفون مگااسکیل | `mobile/` | [11-mobile-console.md](11-mobile-console.md) | آزمون واقعی Safari/iOS و وزن ایندکس |
 | 12 | Viking Cinematic Motion Study | `viking-team/motion/` | [12-viking-motion-study.md](12-viking-motion-study.md) | lockfile، typecheck و preview کنترل‌شده |
+| 13 | Storefront Studio | `storefronts/` | [13-storefront-studio.md](13-storefront-studio.md) | انتقال NAFAS به مخزن و اجرای گیت + Lighthouse |
 
 برای تغییرات مشترکِ CI، `doctor` و فهرست پروژه‌ها از [دفتر جریان ریشه](../../PROGRESS.md) استفاده کن؛ دفتر محصول را برای تاریخچهٔ تغییر بین‌پروژه‌ای به‌جای آن بازنویسی نکن.
 

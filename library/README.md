@@ -7,9 +7,9 @@ Shared assets of the MEGA SKILLS 3000 project, kept in one place. Backend/fronte
 | MEGA SKILLS 3000 site + engine | `psk/` | live on Vercel (project `psk-3000`, root `psk`) |
 | MEGA SKILLS 3000 portfolio (Puria Salimi, Content Director) | `psk/public/puria/` | served at `/puria/`; static port of the original React/Vite source, same copy, photo (SHA-256 identical) and scroll choreography |
 | About page with founder section | `psk/public/about.html` | served at `/about` |
-| Curated project skills (8) | `library/skills/` | install: `bash library/install.sh [project-path]` |
-| Mega Skills Router plugin | `plugins/mega-skills-router/` (marketplace `psk` in `.claude-plugin/`) | installable anywhere: `/plugin marketplace add salimipuria-blip/MegaSkillClaude` then `/plugin install mega-skills-router@psk`; self-contained copy of all 6,019 skills |
-| Mega Skills Router | `.claude/skills/mega-skills-router/` | the only auto-loaded skill: routes each request through 15 domain indexes and 30,080 triggers to relevant skills among 6,019 (3,000 core + 8 project + 3,011 GitHub); 5,738 are routable by default and 281 incomplete entries are excluded |
+| Curated project skills (9) | `library/skills/` | install: `bash library/install.sh [project-path]` |
+| Mega Skills Router plugin | `plugins/mega-skills-router/` (marketplace `psk` in `.claude-plugin/`) | installable anywhere: `/plugin marketplace add salimipuria-blip/MegaSkillClaude` then `/plugin install mega-skills-router@psk`; self-contained copy of all 6,020 skills |
+| Mega Skills Router | `.claude/skills/mega-skills-router/` | the only auto-loaded skill: routes each request through 15 domain indexes and 30,086 triggers to relevant skills among 6,020 (3,000 core + 9 project + 3,011 GitHub); 5,739 are routable by default and 281 incomplete entries are excluded |
 | GitHub skills (3,011, MIT) | `library/github-skills/` | current canonical index from 50 public repositories; available through the router; see its README |
 
 Original portfolio hosting: https://purias-salimi.salimipuria.chatgpt.site/
@@ -21,6 +21,7 @@ Original portfolio hosting: https://purias-salimi.salimipuria.chatgpt.site/
 - `marketing-campaign-planner`
 - `sales-copy-writer`
 - `visual-design-brief`
+- `storefront-design-system` — استاندارد طراحی سایت فروشگاهی فارسی/RTL (UI/UX pro + 3D): `storefronts/`
 - `online-vscode-mobile-coding`
 - `hermes-autonomous-self-improvement`
 

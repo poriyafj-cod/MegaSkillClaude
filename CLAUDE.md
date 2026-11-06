@@ -26,6 +26,15 @@
 - **MEGA SKILLS 3000**: پوشه‌ی `psk/`، سایت `psk-3000` روی Vercel.
 - **Lithos**: پوشه‌ی `lithos/`، داشبورد خصوصی؛ دیتابیس Supabase فقط برای مالک (جدول `lithos_owners`).
 
+## سایت‌های فروشگاهی (NAFAS · NIGHTLAB · LIFESTAR و هر فروشگاه بعدی)
+- **قبل از هر طراحی فروشگاهی، `storefronts/design-system/MASTER.md` را بخوان** و همان قرارداد را اجرا کن
+  (توکن ۳ رنگ، تایپوگرافی فارسی قفل‌شده، ۱۷ کامپوننت، ریتم سینمایی، ۳D فقط با دلیل و fallback).
+- مهارت مسیریاب: `library/skills/storefront-design-system/SKILL.md`. فهرست سایت‌ها: `storefronts/sites.json`.
+- صفحات: `home` / `shop` / `product` / `about` / `contact` + ۴ صفحهٔ سیاست — هیچ لینک `#` برای خرید.
+- قبل از تحویل: `node storefronts/scripts/storefront-check.mjs --dir <site>` و گیت‌های
+  `storefronts/checklist/release-gates.md`؛ نتیجهٔ واقعی را در `storefronts/PROGRESS.md` بنویس.
+- آمار/نظر/ضمانت ساختگی ممنوع؛ اگر داده واقعی نیست، صریح «نمونه» علامت بخورد.
+
 ## پروژه‌ها و تست
 همهٔ پروژه‌ها در همین مخزن‌اند؛ نقشهٔ پوشه‌ها و انتشار در `README.md`، وضعیت و کارهای بعدی در `ROADMAP.md`.
 - `psk`: `npm run check && npm test`
@@ -35,6 +44,7 @@
 - `viking-team`: `python3 -m unittest discover -s tests`
 - `orchestrator`: `python scripts/audit/check_repository_contract.py` و pytest (فهرست فایل‌ها در CI)
 - مسیریاب مهارت‌ها: `python -m unittest discover -s tests`
+- فروشگاه‌ها (`storefronts/`): `node scripts/doctor.mjs storefronts`
 - `hermes` (از ریشه): `node --test hermes/worker.test.mjs` و `bash -n hermes/setup.sh`
 - CI در `.github/workflows/ci.yml` همه را روی هر PR اجرا می‌کند.
 

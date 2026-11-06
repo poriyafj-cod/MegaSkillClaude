@@ -33,6 +33,7 @@ const PROJECTS = [
   { id: "bison-brand-book", name: "BISON Brand Book", fa: "کتاب برند بایسون", path: "bison-brand-book", test: "node scripts/doctor.mjs bison-brand-book", desc: "برندبوک سینمایی Vite + GSAP" },
   { id: "orchestrator", name: "Orchestrator", fa: "ارکستریتور (تاریخی)", path: "orchestrator", test: "node scripts/doctor.mjs orchestrator", desc: "توابع قدیمی Supabase Edge؛ مرجع مهاجرت" },
   { id: "router", name: "Skill Library & Router", fa: "کتابخانه و مسیریاب مهارت‌ها", path: "plugins/mega-skills-router", test: "node scripts/doctor.mjs router", desc: "منبع canonical، sync و پلاگین قابل‌نصب" },
+  { id: "storefronts", name: "Storefront Studio", fa: "استودیوی طراحی فروشگاه", path: "storefronts", test: "node storefronts/scripts/storefront-check.mjs --all", desc: "سیستم طراحی و گیت‌های سایت فروشگاهی؛ NAFAS، NIGHTLAB، LIFESTAR" },
   { id: "brand-stickers", name: "Viking Sticker Packs", fa: "استیکرهای وایکینگ آفرود", path: "brands/viking-offroad", test: "node scripts/doctor.mjs brand-stickers", desc: "۱۲ پک، ۳۶۰ PNG شفاف و سورس ساخت" },
   { id: "brand-viking", name: "Viking Content Templates", fa: "قالب پست و استوری وایکینگ", path: "brand/viking", test: "node scripts/doctor.mjs brand-viking", desc: "قالب HTML و رندر محلی Playwright" },
   { id: "tasks", name: "Hermes Tasks", fa: "برنامهٔ تسک‌های هرمس", path: "tasks", test: "python3 tasks/apply_hermes_tasks.py --manifest tasks/hermes_tasks.json --validate-only", desc: "مانیفست و پلنر فقط‌خواندنی تسک‌ها" },

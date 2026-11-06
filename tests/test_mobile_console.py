@@ -40,6 +40,7 @@ class MobileConsoleTests(unittest.TestCase):
         doctor_ids = {
             "psk", "hermes", "fjcod", "lithos", "viking-team", "viking-motion",
             "bison-brand-book", "orchestrator", "router", "mobile", "brand-stickers", "brand-viking",
+            "storefronts",
         }
         self.assertTrue(doctor_ids.issubset(project_ids))
         count = json.loads((MOBILE / "skills-index.json").read_text(encoding="utf-8"))["counts"]["routable_skills"]
