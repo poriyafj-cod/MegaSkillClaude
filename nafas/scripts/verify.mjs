@@ -63,6 +63,7 @@ for (const img of [
   "nafas-look.jpg",
   "nafas-og.jpg",
   "nafas-contact.jpg",
+  "nafas-garden.jpg",
   "nafas-frame-peace.jpg",
   "nafas-frame-smile.jpg",
   "nafas-frame-laugh.jpg",

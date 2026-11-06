@@ -2189,3 +2189,138 @@
     transition: none;
   }
 }
+
+/* =========================================================
+   HOME — garden campaign band ("THE GARDEN EDIT")
+   ========================================================= */
+.garden {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(440px, 62vw, 660px);
+  padding-block: clamp(30px, 5vw, 64px);
+  background: var(--sand);
+}
+
+.garden__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 14%;
+  z-index: -2;
+}
+
+.garden::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(0deg, rgba(23, 17, 37, 0.88) 0%, rgba(23, 17, 37, 0.55) 32%, rgba(23, 17, 37, 0.12) 62%, rgba(23, 17, 37, 0) 84%),
+    linear-gradient(90deg, rgba(23, 17, 37, 0.35) 0%, rgba(23, 17, 37, 0) 55%);
+}
+
+.garden > .container {
+  width: 100%;
+}
+
+.garden__card {
+  position: relative;
+  max-width: 620px;
+  color: #fff;
+}
+
+.garden .eyebrow {
+  color: var(--lime);
+}
+
+.garden .eyebrow::before {
+  background: var(--lime);
+}
+
+.garden__title {
+  margin-block: 12px 14px;
+  font-size: clamp(1.7rem, 4.4vw, 3.1rem);
+  font-weight: 900;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-wrap: balance;
+}
+
+.garden__title .en {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.42em;
+  letter-spacing: 0.22em;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.garden__desc {
+  max-width: 46ch;
+  font-size: clamp(0.92rem, 1.3vw, 1rem);
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.garden__looks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0 4px;
+  padding: 0;
+  list-style: none;
+}
+
+.garden__looks a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 16px;
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition:
+    background var(--t-fast) var(--ease),
+    border-color var(--t-fast) var(--ease),
+    transform var(--t-fast) var(--ease);
+}
+
+.garden__looks a:hover,
+.garden__looks a:focus-visible {
+  background: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.55);
+  transform: translateY(-2px);
+}
+
+.garden__looks a span {
+  font-family: var(--font-en);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--lime);
+}
+
+.garden__price {
+  font-weight: 800;
+  color: var(--lime);
+}
+
+@media (max-width: 639px) {
+  .garden {
+    min-height: 74vh;
+  }
+
+  .garden__looks a {
+    padding: 8px 13px;
+    font-size: 0.78rem;
+  }
+}

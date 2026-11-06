@@ -79,6 +79,9 @@ const money = (n) => n;
   check("home: contact sheet image", Boolean(d.querySelector("#faces .film__print img[src*='nafas-contact']")));
   check("home: contact sheet stamp", /۱۲/.test(d.querySelector("#faces .film__stamp").textContent));
   check("home: contact sheet points", d.querySelectorAll("#faces .film__list li").length === 3);
+  check("home: garden campaign image", Boolean(d.querySelector("#garden .garden__img[src*='nafas-garden']")));
+  check("home: garden shop-the-look links", d.querySelectorAll("#garden .garden__looks a").length === 3);
+  check("home: garden links hit product pages", [...d.querySelectorAll("#garden .garden__looks a")].every((a) => a.getAttribute("href").startsWith("product.html?p=")));
   check("home: every brand face image exists", [...d.querySelectorAll("#faces img")].every((img) => img.getAttribute("src").startsWith("assets/img/brand/")));
 }
 
