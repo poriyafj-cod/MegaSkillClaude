@@ -1985,15 +1985,15 @@
 }
 
 .film__tape--b {
-  top: 46%;
-  inset-inline-end: -34px;
-  rotate: 68deg;
+  top: -15px;
+  inset-inline-end: -26px;
+  rotate: 38deg;
 }
 
 .film__stamp {
   position: absolute;
-  inset-inline-start: -14px;
-  bottom: 24px;
+  inset-inline-start: -16px;
+  bottom: 70px;
   display: grid;
   place-items: center;
   width: 82px;
