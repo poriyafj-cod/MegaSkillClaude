@@ -742,6 +742,33 @@
   margin: 0;
 }
 
+/* Float cards — avoid overlap on narrow screens */
+@media (max-width: 559px) {
+  .float-card--product,
+  .float-card--social {
+    inset-inline-end: auto;
+    inset-inline-start: 22px;
+    width: auto;
+    max-width: calc(100vw - 44px);
+    inset-block-end: auto;
+    inset-block-start: 22px;
+    margin-top: 10px;
+  }
+
+  .float-card--product {
+    inset-block-start: 110px;
+  }
+
+  .float-card--social {
+    inset-block-start: 200px;
+  }
+
+  .float-card--new {
+    font-size: 0.8rem;
+    padding: 10px 14px;
+  }
+}
+
 /* Features strip */
 .feature {
   display: flex;
