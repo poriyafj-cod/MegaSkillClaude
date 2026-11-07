@@ -40,8 +40,13 @@ node scripts/doctor.mjs storefronts router repo
 - **LIFESTAR:** مقایسهٔ کافئین و پک پله‌ای ۶/۱۲/۲۴ الگوی خوبی برای `bundle-builder` و بخش «مقایسه» است.
 
 ## ۴) کارهای باز
-- [ ] کلون/انتقال یکی از سه سایت (اولویت NAFAS) به `storefronts/nafas/` و سبزکردن گیت ایستا.
-- [ ] اصلاح ۴۰۴ نسبی NAFAS و canonical محصولات (`/product?p=`).
+- [x] NAFAS کامل بازسازی شد و به `main` منتقل شد (PR #3 merge) — producción در گام
+- [x] گیت ایستا NAFAS: `storefront-check.mjs` pass · `doctor storefronts` pass · 66 تست ریشه OK
+- [x] فونت بومی (Vazirmatn variable + Anton woff2)، preload شده، بدون Google Fonts
+- [x] ۴ صفحه سیاست (ارسال، مرجوعی، حریم، شرایط) اضافه شد؛ ۴۰۴ لینک‌های مطلق
+- [ ] اصلاح canonical محصولات (`/product.html?p=` ↔ `/product?p=` rewrite)
+- [ ] ساخت `storefronts/starter/` (توکن + پوستهٔ RTL + سبد localStorage)
+- [ ] افزودن بررسی لینک داخلی و `sitemap/robots` به گیت ۵؛ سپس executing Chromium برای سبد/drawer
 - [ ] ساخت `storefronts/starter/` (توکن + پوستهٔ RTL + سبد localStorage) تا سایت جدید از صفر شروع نشود.
 - [ ] افزودن بررسی لینک داخلی و `sitemap/robots` به گیت ۵؛ سپس اجرای Chromium برای سبد/drawer.
 
@@ -59,3 +64,6 @@ node scripts/doctor.mjs storefronts router repo
   (push رد شد) — بند باز است و باید با مجوز مناسب یا از UI گیت‌هاب اضافه شود. شمارنده‌های router به
   ۶٬۰۲۰ / ۵٬۷۳۹ / ۳۰٬۰۸۶ هم‌گام و ایندکس PWA بازتولید شد. نتیجه: ۶۶ تست ریشه، ۵ تست fixture و
   doctor `repo`+`storefronts`+`router`+`mobile` سبز. رندر مرورگری، Lighthouse و دیپلوی زنده انجام **نشده** است.
+
+- **۲۰۲۶-۱۱-۰۷ (اجرا)** — NAFAS «Night Gallery» بازسازی کامل و به `main` merge شد (PR #3); PR #3 merge شد و producesdeployment `dpl_BVf2dmnKof7dz2qGxFBUcvRnFCcc` روی production ایجاد شد. Gates: verify 12 pages/14 products/10 scripts ✓; smoke 51/51 ✓; storefront-check pass ✓; doctor storefronts ✓; 66 Python tests OK. تصاویر AVIF/WebP srcset، هیرو 149KB (≤220KB)، CSS 9.8KB gzip (≤35KB)، JS 30.3KB gzip (≤90KB). `sites.json` و `PROGRESS.md` به‌روزرسانی شدند.
+
