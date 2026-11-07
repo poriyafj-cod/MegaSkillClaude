@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>محصول | نفس</title>
+    <meta name="description" content="جزئیات محصول، مشخصات، راهنمای سایز و نظرات خریداران در فروشگاه نفس." />
+    <meta name="theme-color" content="#6f3ff5" />
+    <link rel="canonical" href="https://nafas-accessories.vercel.app/product" />
+    <meta property="og:site_name" content="نفس | NAFAS" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nafas-accessories.vercel.app/product" />
+    <meta property="og:title" content="محصول | نفس" />
+    <meta property="og:description" content="جزئیات محصول، مشخصات، راهنمای سایز و نظرات خریداران در فروشگاه نفس." />
+    <meta property="og:image" content="https://nafas-accessories.vercel.app/assets/img/brand/nafas-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="نفس | NAFAS — اکسسوری دخترانه" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="محصول | نفس" />
+    <meta name="twitter:description" content="جزئیات محصول، مشخصات، راهنمای سایز و نظرات خریداران در فروشگاه نفس." />
+    <meta name="twitter:image" content="https://nafas-accessories.vercel.app/assets/img/brand/nafas-og.jpg" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="assets/fonts/Vazirmatn-variable.woff2" type="font/woff2" crossorigin />
+    <link rel="preload" as="font" href="assets/fonts/Anton-Regular.woff2" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body data-page="shop">
+    <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
+    <div data-chrome="header"></div>
+
+    <main id="main">
+      <section class="page-head">
+        <div class="container">
+          <nav class="breadcrumbs" id="breadcrumbs" aria-label="مسیر صفحه">
+            <a href="index.html">خانه</a>
+            <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+            <a href="shop.html">فروشگاه</a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 10px">
+        <div class="container">
+          <div class="pdp" id="pdp">
+            <div class="gallery" id="gallery">
+              <div class="gallery__thumbs" id="galleryThumbs"></div>
+              <div class="gallery__main">
+                <picture id="galleryMainPicture">
+                  <source srcset="assets/img/products/pearl-carabiner.avif" type="image/avif" />
+                  <source srcset="assets/img/products/pearl-carabiner.webp" type="image/webp" />
+                  <img id="galleryImg" src="assets/img/products/pearl-carabiner.jpg" alt="" width="1000" height="1250" />
+                </picture>
+                <span class="gallery__zoom">⌕ بزرگ‌نمایی</span>
+              </div>
+            </div>
+
+            <div class="pdp__info" id="pdpInfo">
+              <div class="cluster" style="gap: 8px">
+                <span class="badge badge--soft" id="pdpCat">گردنبند</span>
+                <span class="pill" id="pdpStock">موجود در انبار</span>
+              </div>
+              <h1 class="pdp__title" id="pdpTitle">در حال بارگذاری…</h1>
+              <div class="pdp__meta">
+                <span class="rating" id="pdpRating"></span>
+                <span class="muted small" id="pdpReviews"></span>
+                <span class="muted small" id="pdpCode"></span>
+              </div>
+              <div class="pdp__price" id="pdpPrice"></div>
+              <p class="pdp__short" id="pdpShort"></p>
+              <div class="option-block" id="colorBlock" hidden>
+                <span class="option-block__label">رنگ: <span id="colorLabel"></span></span>
+                <div class="option-row" id="colorOptions"></div>
+              </div>
+              <div class="option-block" id="sizeBlock" hidden>
+                <span class="option-block__label">انتخاب <span id="sizeLabelText">سایز</span>: <span id="sizeLabel"></span></span>
+                <div class="option-row" id="sizeOptions"></div>
+              </div>
+              <div class="buy-row">
+                <div class="qty" aria-label="تعداد">
+                  <button type="button" id="qtyDec" aria-label="کاهش تعداد">−</button>
+                  <span id="qtyValue">۱</span>
+                  <button type="button" id="qtyInc" aria-label="افزایش تعداد">+</button>
+                </div>
+                <button class="btn btn--lg" type="button" id="addToCart">
+                  <span data-icon="bag"></span> افزودن به سبد خرید
+                </button>
+                <button class="buy-row__like" type="button" id="pdpLike" aria-label="افزودن به علاقه‌مندی‌ها">
+                  <span data-icon="heart"></span>
+                </button>
+              </div>
+              <div class="trust-row">
+                <div><span data-icon="truck"></span> ارسال ۲۴ ساعته</div>
+                <div><span data-icon="shield"></span> ضمانت اصالت</div>
+                <div><span data-icon="refresh"></span> ۷ روز مرجوعی</div>
+              </div>
+              <div class="accordion" id="pdpAccordion"></div>
+              <p class="small muted" id="pdpShipNote"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tint">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-head__text">
+              <span class="eyebrow">نظر خریداران</span>
+              <h2 class="h-2">دخترهایی که این قطعه رو خریدن</h2>
+            </div>
+            <span class="pill pill--violet" id="reviewAvg">—</span>
+          </div>
+          <div class="reviews" id="reviews"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-head__text">
+              <span class="eyebrow">با هم بپوش</span>
+              <h2 class="h-2">این‌ها رو هم دوست داری</h2>
+            </div>
+            <a class="btn btn--ghost btn--sm" href="shop.html">همهٔ محصولات</a>
+          </div>
+          <div class="product-grid" id="relatedGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <div data-chrome="footer"></div>
+
+    <script src="assets/js/icons.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/product.js"></script>
+  </body>
+</html>

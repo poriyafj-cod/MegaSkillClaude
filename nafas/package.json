@@ -1,0 +1,24 @@
+{
+  "name": "nafas-accessories",
+  "private": true,
+  "version": "1.0.0",
+  "description": "نفس (NAFAS) — فروشگاه اکسسوری دخترانه؛ سایت استاتیک بدون بیلد",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "verify": "node scripts/verify.mjs",
+    "check": "node scripts/verify.mjs"
+  },
+  "keywords": [
+    "accessories",
+    "ecommerce",
+    "static-site",
+    "rtl",
+    "persian"
+  ],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "jsdom": "^30.1.3"
+  }
+}

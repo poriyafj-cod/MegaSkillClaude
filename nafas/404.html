@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>صفحه پیدا نشد | نفس</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#6f3ff5" />
+    <link rel="canonical" href="https://nafas-accessories.vercel.app/404" />
+    <meta property="og:site_name" content="نفس | NAFAS" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nafas-accessories.vercel.app/404" />
+    <meta property="og:title" content="صفحه پیدا نشد | نفس" />
+    <meta property="og:description" content="صفحه پیدا نشد | نفس" />
+    <meta property="og:image" content="https://nafas-accessories.vercel.app/assets/img/brand/nafas-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="نفس | NAFAS — اکسسوری دخترانه" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="صفحه پیدا نشد | نفس" />
+    <meta name="twitter:description" content="صفحه پیدا نشد | نفس" />
+    <meta name="twitter:image" content="https://nafas-accessories.vercel.app/assets/img/brand/nafas-og.jpg" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="assets/fonts/Vazirmatn-variable.woff2" type="font/woff2" crossorigin />
+    <link rel="preload" as="font" href="assets/fonts/Anton-Regular.woff2" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body data-page="404">
+    <div data-chrome="header"></div>
+    <main id="main" class="section">
+      <div class="container" style="text-align: center">
+        <p class="en" style="font-size: clamp(5rem, 22vw, 14rem); color: var(--v-200); line-height: 0.85">404</p>
+        <h1 class="h-1" style="margin-top: 10px">این صفحه از قفسه افتاد</h1>
+        <p class="lead" style="max-width: 44ch; margin: 12px auto 0">
+          آدرسی که دنبالش بودی پیدا نشد؛ شاید محصول از کالکشن حذف شده یا لینک اشتباه تایپ شده باشد.
+        </p>
+        <figure class="frame frame--small">
+          <img
+            src="assets/img/brand/nafas-frame-peek.jpg"
+            alt="قاب دوازدهم کانتکت‌شیت نفس — از بالای میز نگاه می‌کند"
+            width="480"
+            height="600"
+            loading="lazy"
+          />
+          <figcaption>قاب ۱۲ — از این‌طرف هم خبری نیست</figcaption>
+        </figure>
+        <div class="cluster" style="justify-content: center; margin-top: 26px">
+          <a class="btn" href="index.html">بازگشت به خانه</a>
+          <a class="btn btn--ghost" href="shop.html">دیدن فروشگاه</a>
+        </div>
+        <div class="style-grid" style="margin-top: 48px" id="styleGrid"></div>
+      </div>
+    </main>
+    <div data-chrome="footer"></div>
+    <script src="assets/js/icons.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script>
+      (function () {
+        const grid = document.getElementById("styleGrid");
+        if (!grid) return;
+        const picks = ["pearl-cluster", "gold-hoops", "butterfly-clip", "tote-mini"];
+        grid.innerHTML = picks
+          .map(function (slug) {
+            return (
+              '<a class="style-tile" href="product.html?p=' + slug + '">' +
+              '<img src="assets/img/products/' + slug + '.jpg" alt="" loading="lazy">' +
+              '<span class="style-tile__tag">پیشنهاد نفس</span></a>'
+            );
+          })
+          .join("");
+      })();
+    </script>
+  </body>
+</html>

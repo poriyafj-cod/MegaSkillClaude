@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>علاقه‌مندی‌ها | نفس</title>
+    <meta name="description" content="لیست علاقه‌مندی‌های شما در فروشگاه نفس." />
+    <meta name="theme-color" content="#6f3ff5" />
+    <link rel="canonical" href="https://nafas-accessories.vercel.app/wishlist" />
+    <meta property="og:site_name" content="نفس | NAFAS" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nafas-accessories.vercel.app/wishlist" />
+    <meta property="og:title" content="علاقه‌مندی‌ها | نفس" />
+    <meta property="og:description" content="لیست علاقه‌مندی‌های شما در فروشگاه نفس." />
+    <meta property="og:image" content="https://nafas-accessories.vercel.app/assets/img/brand/nafas-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="نفس | NAFAS — اکسسوری دخترانه" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="علاقه‌مندی‌ها | نفس" />
+    <meta name="twitter:description" content="لیست علاقه‌مندی‌های شما در فروشگاه نفس." />
+    <meta name="twitter:image" content="https://nafas-accessories.vercel.app/assets/img/brand/nafas-og.jpg" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="assets/fonts/Vazirmatn-variable.woff2" type="font/woff2" crossorigin />
+    <link rel="preload" as="font" href="assets/fonts/Anton-Regular.woff2" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body data-page="wishlist">
+    <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
+    <div data-chrome="header"></div>
+
+    <main id="main">
+      <section class="page-head">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="مسیر صفحه">
+            <a href="index.html">خانه</a>
+            <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+            <span aria-current="page">علاقه‌مندی‌ها</span>
+          </nav>
+          <div style="margin-top: 16px; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+            <div>
+              <h1 class="h-1">علاقه‌مندی‌های من</h1>
+              <p class="lead" style="margin-top: 8px">هر چیزی که قلبش رو زدی، اینجاست تا بعداً راحت پیداش کنی.</p>
+            </div>
+            <span class="pill pill--violet" id="wishCount">۰ محصول</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 20px">
+        <div class="container">
+          <div id="wishEmpty" hidden>
+            <div class="success-card">
+              <div class="success-card__icon" style="background: var(--pink-soft); color: #b8146f">
+                <span data-icon="heart" style="transform: scale(1.6)"></span>
+              </div>
+              <h2 class="h-2">هنوز چیزی رو لایک نکردی</h2>
+              <p class="lead" style="max-width: 40ch">
+                روی قلب کنار هر محصول بزن تا اینجا ذخیره بشه و بعداً راحت پیداش کنی.
+              </p>
+              <a class="btn" href="shop.html">دیدن محصولات</a>
+            </div>
+          </div>
+          <div class="product-grid" id="wishGrid"></div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div class="newsletter">
+            <div>
+              <span class="eyebrow" style="color: var(--lime)">یادت نره</span>
+              <h2>وقتی قیمت‌ها پایین می‌آد، اول به تو خبر می‌دیم</h2>
+              <p>ایمیلت رو ثبت کن تا تخفیف محصولات مورد علاقه‌ات رو زودتر از همه بگیری.</p>
+            </div>
+            <form class="newsletter-form" data-newsletter novalidate>
+              <input class="input" type="email" placeholder="ایمیلت رو بنویس…" aria-label="ایمیل" required />
+              <button class="btn btn--lime" type="submit">عضویت</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-chrome="footer"></div>
+
+    <script src="assets/js/icons.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/wishlist.js"></script>
+  </body>
+</html>
