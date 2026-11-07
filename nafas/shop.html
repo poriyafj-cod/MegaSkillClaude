@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>فروشگاه | نفس — همهٔ اکسسوری‌ها</title>
+    <meta
+      name="description"
+      content="همهٔ اکسسوری‌های نفس: گردنبند، گوشواره، حلقه، دستبند، اکسسوری مو و کیف. فیلتر بر اساس دسته، رنگ و قیمت."
+    />
+    <meta name="theme-color" content="#6f3ff5" />
+    <link rel="canonical" href="https://nafas-accessories.vercel.app/shop" />
+    <meta property="og:site_name" content="نفس | NAFAS" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nafas-accessories.vercel.app/shop" />
+    <meta property="og:title" content="فروشگاه | نفس — همهٔ اکسسوری‌ها" />
+    <meta property="og:description" content="همهٔ اکسسوری‌های نفس: گردنبند، گوشواره، حلقه، دستبند، اکسسوری مو و کیف. فیلتر بر اساس دسته، رنگ و قیمت." />
+    <meta property="og:image" content="https://nafas-accessories.vercel.app/assets/img/brand/nafas-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="نفس | NAFAS — اکسسوری دخترانه" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="فروشگاه | نفس — همهٔ اکسسوری‌ها" />
+    <meta name="twitter:description" content="همهٔ اکسسوری‌های نفس: گردنبند، گوشواره، حلقه، دستبند، اکسسوری مو و کیف. فیلتر بر اساس دسته، رنگ و قیمت." />
+    <meta name="twitter:image" content="https://nafas-accessories.vercel.app/assets/img/brand/nafas-og.jpg" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="assets/fonts/Vazirmatn-variable.woff2" type="font/woff2" crossorigin />
+    <link rel="preload" as="font" href="assets/fonts/Anton-Regular.woff2" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body data-page="shop">
+    <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
+    <div data-chrome="header"></div>
+
+    <main id="main">
+      <section class="page-head">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="مسیر صفحه">
+            <a href="index.html">خانه</a>
+            <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+            <span aria-current="page">فروشگاه</span>
+          </nav>
+          <div style="margin-top: 18px; display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; flex-wrap: wrap">
+            <div>
+              <h1 class="h-1" id="shopTitle">همهٔ اکسسوری‌ها</h1>
+              <p class="lead" id="shopSubtitle" style="margin-top: 8px">
+                از مروارید مینیمال تا گیره‌های Y2K — چیزی که با استایلت هماهنگ باشه اینجاست.
+              </p>
+            </div>
+            <span class="pill pill--violet" id="shopCountPill">۱۴ محصول</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" style="padding-top: 24px">
+        <div class="container shop-layout">
+          <!-- ---------- filters ---------- -->
+          <aside class="filters" id="filters" aria-label="فیلترها">
+            <div class="filters__head">
+              <h2>فیلترها</h2>
+              <div style="display: flex; gap: 6px; align-items: center">
+                <button class="chip-btn" type="button" data-clear-filters style="padding: 6px 12px; font-size: 0.78rem">
+                  پاک کردن
+                </button>
+                <button class="icon-btn" type="button" data-close-filters aria-label="بستن فیلترها" style="display: none" data-filter-close>
+                  <span data-filter-close-icon></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="filters__group">
+              <h3 class="filters__title">دسته‌بندی</h3>
+              <div class="filter-list" id="filterCats"></div>
+            </div>
+
+            <hr class="divider" />
+
+            <div class="filters__group">
+              <h3 class="filters__title">حداکثر قیمت</h3>
+              <div class="price-range">
+                <input type="range" id="priceRange" min="100000" max="1400000" step="50000" value="1400000" aria-label="حداکثر قیمت" />
+                <div class="price-range__labels">
+                  <span>۱۰۰٬۰۰۰ تومان</span>
+                  <span id="priceRangeValue">۱٬۴۰۰٬۰۰۰ تومان</span>
+                </div>
+              </div>
+            </div>
+
+            <hr class="divider" />
+
+            <div class="filters__group">
+              <h3 class="filters__title">رنگ</h3>
+              <div class="swatches" id="filterColors"></div>
+            </div>
+
+            <hr class="divider" />
+
+            <div class="filters__group">
+              <h3 class="filters__title">سایر</h3>
+              <div class="filter-list">
+                <label class="filter-opt"><input type="checkbox" id="onlySale" /> فقط تخفیف‌دار</label>
+                <label class="filter-opt"><input type="checkbox" id="onlyNew" /> تازه رسیده</label>
+                <label class="filter-opt"><input type="checkbox" id="onlyStock" /> فقط موجود</label>
+              </div>
+            </div>
+
+            <button class="btn btn--block" type="button" data-close-filters data-apply-filters style="display: none">دیدن نتایج</button>
+          </aside>
+
+          <!-- ---------- results ---------- -->
+          <div>
+            <div class="shop-toolbar">
+              <div class="shop-toolbar__right">
+                <button class="chip-btn filter-toggle" type="button" data-open-filters>
+                  <span data-filter-icon></span> فیلترها
+                </button>
+                <span class="result-count" id="resultCount"></span>
+              </div>
+              <label style="display: flex; align-items: center; gap: 8px">
+                <span class="small muted">مرتب‌سازی:</span>
+                <select class="select select--sort" id="sortSelect" aria-label="مرتب‌سازی">
+                  <option value="popular">پرفروش‌ترین</option>
+                  <option value="newest">جدیدترین</option>
+                  <option value="price-asc">ارزان‌ترین</option>
+                  <option value="price-desc">گران‌ترین</option>
+                  <option value="rating">بالاترین امتیاز</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="active-filters" id="activeFilters"></div>
+            <div class="product-grid" id="shopGrid"></div>
+            <div class="load-more-wrap" id="loadMoreWrap" hidden>
+              <button class="btn btn--ghost" type="button" id="loadMore">محصولات بیشتر</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div class="features" id="featureStrip"></div>
+        </div>
+      </section>
+    </main>
+
+    <div data-chrome="footer"></div>
+
+    <script src="assets/js/icons.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/shop.js"></script>
+  </body>
+</html>

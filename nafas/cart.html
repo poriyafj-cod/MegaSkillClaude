@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>سبد خرید | نفس</title>
+    <meta name="description" content="سبد خرید نفس — تکمیل سفارش، انتخاب روش پرداخت و ثبت اطلاعات ارسال." />
+    <meta name="theme-color" content="#6f3ff5" />
+    <link rel="canonical" href="https://nafas-accessories.vercel.app/cart" />
+    <meta property="og:site_name" content="نفس | NAFAS" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nafas-accessories.vercel.app/cart" />
+    <meta property="og:title" content="سبد خرید | نفس" />
+    <meta property="og:description" content="سبد خرید نفس — تکمیل سفارش، انتخاب روش پرداخت و ثبت اطلاعات ارسال." />
+    <meta property="og:image" content="https://nafas-accessories.vercel.app/assets/img/brand/nafas-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="نفس | NAFAS — اکسسوری دخترانه" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="سبد خرید | نفس" />
+    <meta name="twitter:description" content="سبد خرید نفس — تکمیل سفارش، انتخاب روش پرداخت و ثبت اطلاعات ارسال." />
+    <meta name="twitter:image" content="https://nafas-accessories.vercel.app/assets/img/brand/nafas-og.jpg" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="assets/fonts/Vazirmatn-variable.woff2" type="font/woff2" crossorigin />
+    <link rel="preload" as="font" href="assets/fonts/Anton-Regular.woff2" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body data-page="cart">
+    <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
+    <div data-chrome="header"></div>
+
+    <main id="main">
+      <section class="page-head">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="مسیر صفحه">
+            <a href="index.html">خانه</a>
+            <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+            <span aria-current="page">سبد خرید</span>
+          </nav>
+          <h1 class="h-1" style="margin-top: 14px">سبد خرید و تکمیل سفارش</h1>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 18px">
+        <div class="container">
+          <!-- empty -->
+          <div id="cartEmpty" hidden>
+            <div class="success-card">
+              <div class="success-card__icon" style="background: var(--v-100); color: var(--v-700)">
+                <span data-icon="bag" style="transform: scale(1.6)"></span>
+              </div>
+              <h2 class="h-2">سبد خریدت خالیه</h2>
+              <p class="lead" style="max-width: 42ch">
+                هنوز چیزی انتخاب نکردی. از کالکشن پاییز یه سر بزن؛ گیره‌های پروانه‌ای و چوکرهای مروارید منتظرتن.
+              </p>
+              <div class="cluster" style="justify-content: center">
+                <a class="btn" href="shop.html">دیدن محصولات</a>
+                <a class="btn btn--ghost" href="shop.html?tag=bestseller">پرفروش‌ترین‌ها</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- cart + checkout -->
+          <div id="cartWrap" hidden>
+            <div class="checkout-steps" id="steps">
+              <span class="step-pill is-active" data-step-pill="1"><span class="step-pill__num">۱</span> سبد خرید</span>
+              <span class="step-pill" data-step-pill="2"><span class="step-pill__num">۲</span> اطلاعات ارسال</span>
+              <span class="step-pill" data-step-pill="3"><span class="step-pill__num">۳</span> پرداخت و ثبت</span>
+            </div>
+
+            <div class="cart-layout">
+              <div>
+                <!-- step 1 -->
+                <div id="cartPanel">
+                  <div class="cart-list" id="cartList"></div>
+                  <div class="cluster" style="margin-top: 18px; justify-content: space-between">
+                    <a class="btn btn--ghost btn--sm" href="shop.html">ادامهٔ خرید</a>
+                    <button class="btn btn--sm" type="button" id="toCheckout">
+                      ادامه و ثبت اطلاعات <span data-icon="arrow-left"></span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- step 2 & 3 -->
+                <div id="checkoutPanel" hidden>
+                  <form class="form-card" id="checkoutForm" novalidate>
+                    <h2>اطلاعات ارسال</h2>
+                    <div class="form-grid form-grid--2">
+                      <div class="field">
+                        <label class="field__label" for="fName">نام و نام خانوادگی</label>
+                        <input class="input" id="fName" name="name" autocomplete="name" placeholder="مثلاً نفس محمدی" />
+                        <span class="field__error" data-error-for="name"></span>
+                      </div>
+                      <div class="field">
+                        <label class="field__label" for="fPhone">شمارهٔ موبایل</label>
+                        <input class="input" id="fPhone" name="phone" inputmode="numeric" autocomplete="tel" placeholder="۰۹۱۲۳۴۵۶۷۸۹" />
+                        <span class="field__error" data-error-for="phone"></span>
+                      </div>
+                      <div class="field">
+                        <label class="field__label" for="fProvince">استان</label>
+                        <select class="select" id="fProvince" name="province">
+                          <option value="">انتخاب کن</option>
+                          <option>تهران</option>
+                          <option>البرز</option>
+                          <option>اصفهان</option>
+                          <option>فارس</option>
+                          <option>خراسان رضوی</option>
+                          <option>آذربایجان شرقی</option>
+                          <option>گیلان</option>
+                          <option>مازندران</option>
+                          <option>خوزستان</option>
+                          <option>سایر</option>
+                        </select>
+                        <span class="field__error" data-error-for="province"></span>
+                      </div>
+                      <div class="field">
+                        <label class="field__label" for="fCity">شهر</label>
+                        <input class="input" id="fCity" name="city" autocomplete="address-level2" placeholder="مثلاً تهران" />
+                        <span class="field__error" data-error-for="city"></span>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label class="field__label" for="fAddress">نشانی کامل پستی</label>
+                      <textarea class="textarea" id="fAddress" name="address" autocomplete="street-address" placeholder="خیابان، کوچه، پلاک، واحد"></textarea>
+                      <span class="field__error" data-error-for="address"></span>
+                    </div>
+                    <div class="form-grid form-grid--2">
+                      <div class="field">
+                        <label class="field__label" for="fPostal">کد پستی</label>
+                        <input class="input" id="fPostal" name="postal" inputmode="numeric" placeholder="۱۰ رقم" />
+                        <span class="field__error" data-error-for="postal"></span>
+                      </div>
+                      <div class="field">
+                        <label class="field__label" for="fNote">توضیح سفارش (اختیاری)</label>
+                        <input class="input" id="fNote" name="note" placeholder="مثلاً بستهٔ هدیه می‌خواهم" />
+                        <span class="field__error" data-error-for="note"></span>
+                      </div>
+                    </div>
+
+                    <h2 style="margin-top: 6px">روش پرداخت</h2>
+                    <div class="pay-methods">
+                      <label class="pay-method">
+                        <input type="radio" name="pay" value="gateway" checked />
+                        <span><b>پرداخت آنلاین (درگاه بانکی)</b><span>سریع و امن — همهٔ کارت‌های عضو شتاب</span></span>
+                      </label>
+                      <label class="pay-method">
+                        <input type="radio" name="pay" value="card" />
+                        <span><b>کارت‌به‌کارت</b><span>شمارهٔ کارت پس از ثبت سفارش پیامک می‌شود</span></span>
+                      </label>
+                      <label class="pay-method">
+                        <input type="radio" name="pay" value="cod" />
+                        <span><b>پرداخت در محل</b><span>فقط تهران و کرج — با هزینهٔ ۳۰٬۰۰۰ تومان اضافه</span></span>
+                      </label>
+                    </div>
+
+                    <label class="checkbox">
+                      <input type="checkbox" id="fTerms" />
+                      <span>
+                        <a href="contact.html" style="text-decoration: underline">قوانین فروش</a> و شرایط مرجوعی را
+                        خوانده‌ام و می‌پذیرم.
+                      </span>
+                    </label>
+                    <span class="field__error" data-error-for="terms"></span>
+
+                    <div class="cluster" style="justify-content: space-between">
+                      <button class="btn btn--ghost btn--sm" type="button" id="backToCart">بازگشت به سبد</button>
+                      <button class="btn btn--lg" type="submit" id="submitOrder">
+                        ثبت نهایی سفارش <span data-icon="lock"></span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- success -->
+                <div id="orderSuccess" hidden></div>
+              </div>
+
+              <aside class="summary" id="summary"></aside>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-chrome="footer"></div>
+
+    <script src="assets/js/icons.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/cart.js"></script>
+  </body>
+</html>
