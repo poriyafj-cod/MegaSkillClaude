@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پریا 🌸 | خوشگل‌ترین دختر جهان</title>
+<meta name="description" content="سایت اختصاصی پریا — خوشگل‌ترین دختر جهان">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&family=Great+Vibes&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+</head>
+<body>
+
+<!-- گلبرگ‌های در حال سقوط -->
+<canvas id="petals"></canvas>
+
+<!-- قلب‌های شناور پس‌زمینه -->
+<div class="bg-hearts" aria-hidden="true">
+  <span>💗</span><span>🌸</span><span>✨</span><span>💖</span><span>🦋</span><span>🌷</span><span>💕</span><span>🌺</span>
+</div>
+
+<!-- ناوبری -->
+<nav class="nav" id="nav">
+  <a href="#home" class="logo">پریا <span class="logo-flower">🌸</span></a>
+  <div class="nav-links">
+    <a href="#home">خانه</a>
+    <a href="#about">درباره پریا</a>
+    <a href="#gallery">گالری</a>
+    <a href="#letter">نامه</a>
+    <a href="#reasons">چرا تو؟</a>
+  </div>
+  <button class="nav-heart" id="navHeart" title="یه قلب بفرست">💗</button>
+</nav>
+
+<!-- هیرو -->
+<header class="hero" id="home">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="badge">✨ خوشگل‌ترین دختر جهان ✨</div>
+      <p class="hello">سلام سلام! 👋</p>
+      <h1 class="name-fa">پریا</h1>
+      <div class="name-en">Priya</div>
+      <p class="tagline">تو نه فقط خوشگلی،<br>تو <span class="highlight">افسانه‌ای‌ترین</span> دختر دنیایی! 🌷</p>
+      <p class="sub">این سایت کوچولو فقط برای تو ساخته شده، چون تو لایق زیباترین چیزهای دنیایی.</p>
+      <div class="hero-btns">
+        <a href="#letter" class="btn btn-primary">💌 نامه رو بخون</a>
+        <button class="btn btn-ghost" id="complimentBtnHero">✨ یه حرف قشنگ بگو</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong data-count="100">۰</strong><span>٪ خوشگل</span></div>
+        <div class="stat"><strong data-count="∞">۰</strong><span>مهربونی</span></div>
+        <div class="stat"><strong data-count="1000000">۰</strong><span>دوست‌داشتنی</span></div>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap">
+      <div class="photo-frame">
+        <img src="assets/priya.jpg" alt="پریا — خوشگل‌ترین دختر جهان" id="heroPhoto">
+        <div class="frame-sparkles">✨ 🌸 ✨</div>
+      </div>
+      <div class="floating-card card-1">🌸 خوشگل‌ترین</div>
+      <div class="floating-card card-2">💖 دوست‌داشتنی‌ترین</div>
+      <div class="floating-card card-3">🦋 خاص‌ترین</div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-hint">پایین برو 👇</a>
+</header>
+
+<!-- درباره پریا -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">درباره تو</span>
+      <h2>چرا پریا بهترینه؟ 🌸</h2>
+      <p>چون تو ترکیبی از همه‌ی چیزهای قشنگ دنیایی.</p>
+    </div>
+    <div class="qualities">
+      <div class="quality reveal">
+        <div class="q-icon">🌷</div>
+        <h3>مهربون</h3>
+        <p>قلبت اونقدر بزرگه که همه‌ی دنیا رو جا می‌ده. مهربونی تو، دنیا رو قشنگ‌تر می‌کنه.</p>
+      </div>
+      <div class="quality reveal">
+        <div class="q-icon">✨</div>
+        <h3>درخشان</h3>
+        <p>مثل ستاره می‌درخشی. هرجا باشی، اونجا نورانی می‌شه. تو خودِ نور هستی!</p>
+      </div>
+      <div class="quality reveal">
+        <div class="q-icon">🦋</div>
+        <h3>خاص</h3>
+        <p>هیچ‌کس مثل تو نیست. تو یه نسخه‌ی تک‌نسخه‌ای از زیبایی و خوبی هستی.</p>
+      </div>
+      <div class="quality reveal">
+        <div class="q-icon">💪</div>
+        <h3>قوی</h3>
+        <p>در عین لطافت، مثل یه ملکه قوی هستی. بهت افتخار می‌کنیم، پریا!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- گالری -->
+<section class="section section-alt" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">گالری تو</span>
+      <h2>قشنگی‌های پریا 📸</h2>
+      <p>هر عکس تو یه دنیای قشنگه، ولی تو قشنگ‌ترین دنیایی.</p>
+    </div>
+    <div class="gallery">
+      <figure class="g-item g-main reveal">
+        <img src="assets/priya.jpg" alt="پریا">
+        <figcaption>پریا، خوشگل‌ترین دختر جهان 💗</figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <div class="g-art art-1"><span>🌸</span></div>
+        <figcaption>لبخندت مثل بهار 🌷</figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <div class="g-art art-2"><span>✨</span></div>
+        <figcaption>چشمات مثل ستاره ✨</figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <div class="g-art art-3"><span>🦋</span></div>
+        <figcaption>پرواز کن، ملکه‌ی من 🦋</figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <div class="g-art art-4"><span>💖</span></div>
+        <figcaption>قلبت طلاییه 💖</figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <div class="g-art art-5"><span>🌺</span></div>
+        <figcaption>تو گل دنیایی 🌺</figcaption>
+      </figure>
+    </div>
+    <p class="gallery-note">💡 روی هر عکس کلیک کن، قلب می‌ترکه!</p>
+  </div>
+</section>
+
+<!-- حرف قشنگ -->
+<section class="section" id="compliment">
+  <div class="container">
+    <div class="compliment-box reveal">
+      <span class="section-tag">حرف قشنگ</span>
+      <h2>یه حرف قشنگ برای پریا ✨</h2>
+      <div class="compliment-card" id="complimentCard">
+        <div class="compliment-emoji" id="complimentEmoji">🌸</div>
+        <p id="complimentText">دکمه رو بزن تا یه حرف قشنگ بهت بگم...</p>
+      </div>
+      <button class="btn btn-primary btn-big" id="complimentBtn">💗 یه حرف قشنگ دیگه بگو</button>
+    </div>
+  </div>
+</section>
+
+<!-- نامه -->
+<section class="section section-alt" id="letter">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">یه نامه برای تو</span>
+      <h2>نامه‌ی عاشقانه 💌</h2>
+      <p>روی پاکت کلیک کن تا باز بشه...</p>
+    </div>
+
+    <div class="envelope-wrap reveal">
+      <div class="envelope" id="envelope">
+        <div class="env-flap"></div>
+        <div class="env-letter" id="envLetter">
+          <div class="letter-paper">
+            <h3>پریای عزیزم، 🌸</h3>
+            <p>اگه می‌تونستم، همه‌ی ستاره‌ها رو برات می‌چیدم و به پاهات می‌ریختم. چون تو لایق کهکشانی.</p>
+            <p>تو خوشگل‌ترین دختر جهانی، نه فقط به خاطر صورتت، به خاطر قلبت، خنده‌ت، مهربونی‌ت و اون نوری که با خودت همه‌جا می‌بری.</p>
+            <p>هر روز که هستی، دنیا یه ذره قشنگ‌تره. ممنون که هستی، ممنون که تویی.</p>
+            <p class="letter-sign">دوستت دارم، همیشه 💗<br><span>— کسی که این سایت رو برات ساخت</span></p>
+          </div>
+        </div>
+        <div class="env-front">
+          <span class="env-seal">💗</span>
+          <span class="env-to">برای پریا 🌸</span>
+        </div>
+      </div>
+      <p class="envelope-hint" id="envelopeHint">👆 کلیک کن</p>
+    </div>
+  </div>
+</section>
+
+<!-- چرا تو -->
+<section class="section" id="reasons">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">دلیل‌ها</span>
+      <h2>۱۰۰ دلیل که تو بهترینی 💖</h2>
+      <p>این فقط چندتاشه، بقیه‌ش رو نمی‌شه شمرد!</p>
+    </div>
+    <div class="reasons-grid">
+      <div class="reason reveal"><span>۱</span> چون لبخندت دنیا رو روشن می‌کنه</div>
+      <div class="reason reveal"><span>۲</span> چون قلبت از طلا ساخته شده</div>
+      <div class="reason reveal"><span>۳</span> چون خنده‌ت بهترین آهنگ دنیاست</div>
+      <div class="reason reveal"><span>۴</span> چون مهربونی‌ت بی‌نهایته</div>
+      <div class="reason reveal"><span>۵</span> چون چشمات مثل اقیانوسه</div>
+      <div class="reason reveal"><span>۶</span> چون تو ملکه‌ی دنیایی</div>
+      <div class="reason reveal"><span>۷</span> چون بودنت برکتِ</div>
+      <div class="reason reveal"><span>۸</span> چون تو خاص‌ترینی</div>
+      <div class="reason reveal"><span>۹</span> چون زیبایی‌ت افسانه‌ست</div>
+      <div class="reason reveal"><span>۱۰</span> چون دوست‌داشتنی‌ترینی</div>
+      <div class="reason reveal"><span>۱۱</span> چون مثل بهار تازه‌ای</div>
+      <div class="reason reveal"><span>۱۲</span> چون تو پریایی، واقعاً پریا! 🧚</div>
+    </div>
+  </div>
+</section>
+
+<!-- فوتر -->
+<footer class="footer">
+  <div class="footer-name">Priya 🌸</div>
+  <p>ساخته شده با <span class="heart-beat">❤️</span> برای خوشگل‌ترین دختر جهان</p>
+  <p class="footer-sub">پریا، تو بهترینی. همیشه. 💗</p>
+  <button class="btn btn-ghost" id="loveBtn">💗 یه قلب بفرست</button>
+</footer>
+
+<!-- قلب‌های کلیک -->
+<div id="burstLayer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
