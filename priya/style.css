@@ -1,0 +1,214 @@
+/* پریا — خوشگل‌ترین دختر جهان 🌸 */
+:root{
+  --pink-50:#FFF5F7;
+  --pink-100:#FFE4EC;
+  --pink-200:#FFC2D4;
+  --pink-300:#FFA8C5;
+  --pink-400:#FF8FAB;
+  --pink-500:#FB6F92;
+  --rose:#E75480;
+  --rose-dark:#C9184A;
+  --lavender:#CDB4DB;
+  --lavender-light:#E8D5F5;
+  --gold:#FFD6A5;
+  --cream:#FFF9F0;
+  --text:#5C3D4E;
+  --text-soft:#8A6B7D;
+  --white:#FFFFFF;
+  --shadow:0 20px 60px rgba(231,84,128,.18);
+  --shadow-soft:0 10px 40px rgba(231,84,128,.12);
+  --radius:28px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Vazirmatn',system-ui,sans-serif;
+  background:linear-gradient(180deg,var(--pink-50) 0%,#FFF0F5 30%,var(--cream) 70%,var(--pink-50) 100%);
+  color:var(--text);
+  overflow-x:hidden;
+  line-height:1.8;
+}
+::selection{background:var(--pink-300);color:#fff}
+img{max-width:100%;display:block}
+
+/* گلبرگ‌ها */
+#petals{position:fixed;inset:0;pointer-events:none;z-index:1}
+
+/* قلب‌های پس‌زمینه */
+.bg-hearts{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.bg-hearts span{position:absolute;font-size:1.6rem;opacity:.18;animation:floatY 9s ease-in-out infinite}
+.bg-hearts span:nth-child(1){top:8%;right:6%;animation-delay:0s}
+.bg-hearts span:nth-child(2){top:22%;left:8%;animation-delay:1.2s}
+.bg-hearts span:nth-child(3){top:45%;right:10%;animation-delay:2s}
+.bg-hearts span:nth-child(4){top:60%;left:5%;animation-delay:.6s}
+.bg-hearts span:nth-child(5){top:78%;right:7%;animation-delay:1.8s}
+.bg-hearts span:nth-child(6){top:35%;left:45%;animation-delay:2.6s}
+.bg-hearts span:nth-child(7){top:88%;left:20%;animation-delay:.9s}
+.bg-hearts span:nth-child(8){top:15%;left:60%;animation-delay:3s}
+@keyframes floatY{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-22px) rotate(8deg)}}
+
+/* ناوبری */
+.nav{
+  position:fixed;top:0;right:0;left:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 28px;
+  background:rgba(255,245,247,.75);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,168,197,.35);
+}
+.logo{font-weight:900;font-size:1.5rem;color:var(--rose-dark);text-decoration:none}
+.logo-flower{font-size:1.2rem}
+.nav-links{display:flex;gap:22px}
+.nav-links a{color:var(--text);text-decoration:none;font-weight:500;font-size:.95rem;transition:.25s}
+.nav-links a:hover{color:var(--rose-dark);transform:translateY(-1px)}
+.nav-heart{background:var(--white);border:2px solid var(--pink-200);border-radius:50%;width:44px;height:44px;font-size:1.2rem;cursor:pointer;transition:.25s;box-shadow:var(--shadow-soft)}
+.nav-heart:hover{transform:scale(1.12) rotate(-8deg);background:var(--pink-100)}
+
+/* هیرو */
+.hero{position:relative;z-index:2;padding:130px 24px 70px;overflow:hidden}
+.hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(255,168,197,.45),transparent 65%);top:-200px;left:50%;transform:translateX(-50%);pointer-events:none}
+.hero-inner{max-width:1150px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative}
+.badge{display:inline-block;background:var(--white);border:2px solid var(--pink-200);color:var(--rose-dark);padding:8px 20px;border-radius:999px;font-weight:700;font-size:.9rem;box-shadow:var(--shadow-soft);margin-bottom:18px}
+.hello{font-size:1.15rem;color:var(--text-soft);font-weight:500}
+.name-fa{font-size:clamp(4rem,10vw,7rem);font-weight:900;line-height:1.05;background:linear-gradient(135deg,var(--rose-dark),var(--pink-500),var(--lavender));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-1px}
+.name-en{font-family:'Great Vibes',cursive;font-size:clamp(2.4rem,6vw,3.6rem);color:var(--pink-400);line-height:1;margin:6px 0 14px;direction:ltr;text-align:right}
+.tagline{font-size:clamp(1.4rem,3.5vw,2rem);font-weight:800;line-height:1.6}
+.highlight{background:linear-gradient(transparent 55%,var(--pink-200) 55%);padding:0 6px;border-radius:4px}
+.sub{color:var(--text-soft);margin:12px 0 26px;font-size:1.05rem;max-width:480px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;font-family:inherit;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;border:none;transition:.3s}
+.btn-primary{background:linear-gradient(135deg,var(--pink-500),var(--rose));color:#fff;box-shadow:0 12px 30px rgba(231,84,128,.35)}
+.btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 18px 40px rgba(231,84,128,.45)}
+.btn-ghost{background:var(--white);color:var(--rose-dark);border:2px solid var(--pink-200)}
+.btn-ghost:hover{background:var(--pink-100);transform:translateY(-3px)}
+.btn-big{padding:16px 36px;font-size:1.1rem}
+.hero-stats{display:flex;gap:28px;margin-top:36px;flex-wrap:wrap}
+.stat{text-align:center}
+.stat strong{display:block;font-size:1.7rem;font-weight:900;color:var(--rose-dark)}
+.stat span{font-size:.85rem;color:var(--text-soft)}
+
+/* عکس هیرو */
+.hero-photo-wrap{position:relative}
+.photo-frame{
+  position:relative;border-radius:999px 999px 32px 32px;overflow:hidden;
+  border:8px solid var(--white);box-shadow:var(--shadow);
+  aspect-ratio:3/4.2;background:var(--pink-100);
+}
+.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:transform .6s}
+.photo-frame:hover img{transform:scale(1.05)}
+.frame-sparkles{position:absolute;bottom:14px;right:0;left:0;text-align:center;font-size:1.4rem;letter-spacing:8px;pointer-events:none}
+.floating-card{position:absolute;background:var(--white);padding:10px 18px;border-radius:999px;font-weight:800;font-size:.9rem;box-shadow:var(--shadow);border:2px solid var(--pink-100);animation:bob 4s ease-in-out infinite;white-space:nowrap}
+.card-1{top:12%;right:-18px;color:var(--rose-dark)}
+.card-2{top:48%;left:-24px;color:var(--rose);animation-delay:1s}
+.card-3{bottom:10%;right:-10px;color:#9B5DE5;animation-delay:2s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.scroll-hint{display:block;text-align:center;margin-top:50px;color:var(--text-soft);text-decoration:none;font-weight:600;animation:bob 2s ease-in-out infinite}
+
+/* سکشن‌ها */
+.section{position:relative;z-index:2;padding:90px 24px}
+.section-alt{background:linear-gradient(180deg,rgba(255,255,255,.6),rgba(255,228,236,.5))}
+.container{max-width:1150px;margin:0 auto}
+.section-head{text-align:center;margin-bottom:48px}
+.section-tag{display:inline-block;background:var(--pink-100);color:var(--rose-dark);padding:6px 18px;border-radius:999px;font-weight:700;font-size:.85rem;margin-bottom:12px}
+.section-head h2{font-size:clamp(1.8rem,5vw,2.6rem);font-weight:900}
+.section-head p{color:var(--text-soft);margin-top:8px}
+
+/* کیفیت‌ها */
+.qualities{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.quality{background:var(--white);border-radius:var(--radius);padding:32px 24px;text-align:center;border:2px solid var(--pink-100);box-shadow:var(--shadow-soft);transition:.35s}
+.quality:hover{transform:translateY(-8px) rotate(-1deg);border-color:var(--pink-300);box-shadow:var(--shadow)}
+.q-icon{font-size:2.6rem;margin-bottom:12px}
+.quality h3{font-size:1.25rem;margin-bottom:8px;color:var(--rose-dark)}
+.quality p{color:var(--text-soft);font-size:.95rem}
+
+/* گالری */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.g-item{background:var(--white);border-radius:var(--radius);overflow:hidden;border:3px solid var(--white);box-shadow:var(--shadow-soft);transition:.35s;cursor:pointer}
+.g-item:hover{transform:translateY(-6px) scale(1.02);box-shadow:var(--shadow)}
+.g-item img{width:100%;height:280px;object-fit:cover;object-position:center 20%}
+.g-main{grid-row:span 2}
+.g-main img{height:100%;min-height:580px}
+.g-item figcaption{padding:14px 16px;font-weight:700;font-size:.95rem;text-align:center;color:var(--text)}
+.g-art{height:220px;display:flex;align-items:center;justify-content:center;font-size:4rem}
+.art-1{background:linear-gradient(135deg,#FFC2D4,#FF8FAB)}
+.art-2{background:linear-gradient(135deg,#CDB4DB,#FFC2D4)}
+.art-3{background:linear-gradient(135deg,#A2D2FF,#CDB4DB)}
+.art-4{background:linear-gradient(135deg,#FFAFCC,#FFC8DD)}
+.art-5{background:linear-gradient(135deg,#FFD6A5,#FFAFCC)}
+.gallery-note{text-align:center;color:var(--text-soft);margin-top:20px;font-size:.9rem}
+
+/* حرف قشنگ */
+.compliment-box{text-align:center;background:var(--white);border-radius:36px;padding:56px 32px;border:3px solid var(--pink-100);box-shadow:var(--shadow);max-width:760px;margin:0 auto}
+.compliment-box h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:900;margin-bottom:26px}
+.compliment-card{background:linear-gradient(135deg,var(--pink-50),var(--pink-100));border:2px dashed var(--pink-300);border-radius:24px;padding:36px 24px;min-height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;margin-bottom:26px;transition:.3s}
+.compliment-card.pop{animation:pop .45s ease}
+@keyframes pop{0%{transform:scale(.92)}60%{transform:scale(1.04)}100%{transform:scale(1)}}
+.compliment-emoji{font-size:3rem}
+#complimentText{font-size:clamp(1.15rem,3vw,1.5rem);font-weight:800;color:var(--rose-dark);line-height:1.7}
+
+/* پاکت نامه */
+.envelope-wrap{max-width:640px;margin:0 auto;text-align:center}
+.envelope{position:relative;height:420px;cursor:pointer;perspective:1200px}
+.env-front{position:absolute;inset:0;background:linear-gradient(135deg,var(--pink-200),var(--pink-300));border-radius:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;z-index:3;transition:.5s}
+.env-flap{position:absolute;top:0;right:0;left:0;height:50%;background:linear-gradient(180deg,var(--pink-400),var(--pink-300));clip-path:polygon(0 0,100% 0,50% 100%);z-index:4;transform-origin:top;transition:.6s;border-radius:20px 20px 0 0}
+.env-letter{position:absolute;inset:14px;background:var(--white);border-radius:16px;z-index:2;transform:translateY(30px);opacity:0;transition:.7s .15s;overflow:hidden}
+.envelope.open .env-flap{transform:rotateX(180deg);z-index:1}
+.envelope.open .env-letter{transform:translateY(-8px);opacity:1;z-index:5;box-shadow:var(--shadow)}
+.envelope.open .env-front{opacity:0;pointer-events:none}
+.env-seal{font-size:3rem;animation:bob 2.5s ease-in-out infinite}
+.env-to{font-weight:900;font-size:1.3rem;color:var(--rose-dark)}
+.letter-paper{padding:28px 24px;text-align:right;height:100%;overflow-y:auto}
+.letter-paper h3{color:var(--rose-dark);margin-bottom:12px;font-size:1.3rem}
+.letter-paper p{margin-bottom:10px;font-size:.98rem;color:var(--text)}
+.letter-sign{margin-top:16px;font-weight:800;color:var(--rose-dark)}
+.letter-sign span{font-weight:500;color:var(--text-soft);font-size:.9rem}
+.envelope-hint{margin-top:18px;color:var(--text-soft);font-weight:600}
+
+/* دلیل‌ها */
+.reasons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.reason{background:var(--white);border:2px solid var(--pink-100);border-radius:20px;padding:20px;display:flex;gap:14px;align-items:flex-start;font-weight:600;transition:.3s}
+.reason:hover{border-color:var(--pink-300);transform:translateY(-4px);box-shadow:var(--shadow-soft)}
+.reason span{background:linear-gradient(135deg,var(--pink-500),var(--rose));color:#fff;min-width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900}
+
+/* فوتر */
+.footer{position:relative;z-index:2;text-align:center;padding:70px 24px 50px;background:linear-gradient(180deg,transparent,var(--pink-100))}
+.footer-name{font-family:'Great Vibes',cursive;font-size:3rem;color:var(--rose-dark);direction:ltr}
+.footer p{color:var(--text-soft);margin:8px 0}
+.footer-sub{font-weight:800;color:var(--rose-dark);font-size:1.1rem}
+.heart-beat{display:inline-block;animation:beat 1.2s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}25%{transform:scale(1.25)}45%{transform:scale(1.05)}}
+.footer .btn{margin-top:18px}
+
+/* قلب ترکیدن */
+#burstLayer{position:fixed;inset:0;pointer-events:none;z-index:999}
+.burst-heart{position:absolute;font-size:1.4rem;animation:burst 1s ease-out forwards;pointer-events:none}
+@keyframes burst{0%{transform:translate(0,0) scale(.5);opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(1.3) rotate(var(--rot));opacity:0}}
+
+/* ریویل */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ریسپانسیو */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;text-align:center}
+  .hero-photo-wrap{max-width:420px;margin:0 auto;width:100%}
+  .sub{margin-inline:auto}
+  .hero-btns,.hero-stats{justify-content:center}
+  .name-en{text-align:center}
+  .qualities{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .g-main{grid-column:span 2;grid-row:auto}
+  .g-main img{min-height:420px}
+  .reasons-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .card-1{right:0}.card-2{left:0}.card-3{right:0}
+}
+@media(max-width:560px){
+  .qualities{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr}
+  .g-main{grid-column:auto}
+  .reasons-grid{grid-template-columns:1fr}
+  .envelope{height:480px}
+  .section{padding:64px 18px}
+  .hero{padding-top:110px}
+}
